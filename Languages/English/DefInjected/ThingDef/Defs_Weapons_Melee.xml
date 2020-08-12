@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Katana -->
+
+  <Melee_GhostGear_Katana.label>Ghost Katana</Melee_GhostGear_Katana.label>
+  <Melee_GhostGear_Katana.description>A very sharp and effective blade that also delivers mechanite nerve toxin.</Melee_GhostGear_Katana.description>
+  <Melee_GhostGear_Katana.tools.0.label>handle</Melee_GhostGear_Katana.tools.0.label>
+  <Melee_GhostGear_Katana.tools.1.label>point</Melee_GhostGear_Katana.tools.1.label>
+  <Melee_GhostGear_Katana.tools.2.label>edge</Melee_GhostGear_Katana.tools.2.label>
+
+
+  <!-- Kukri -->
+
+  <Melee_GhostGear_Kukri.label>Ghost Kukri</Melee_GhostGear_Kukri.label>
+  <Melee_GhostGear_Kukri.description>A very sharp and fast blade that delivers mechanite nerve toxin.</Melee_GhostGear_Kukri.description>
+  <Melee_GhostGear_Kukri.tools.0.label>handle</Melee_GhostGear_Kukri.tools.0.label>
+  <Melee_GhostGear_Kukri.tools.1.label>blade</Melee_GhostGear_Kukri.tools.1.label>
+  <Melee_GhostGear_Kukri.tools.2.label>point</Melee_GhostGear_Kukri.tools.2.label>
+
+
+</LanguageData>

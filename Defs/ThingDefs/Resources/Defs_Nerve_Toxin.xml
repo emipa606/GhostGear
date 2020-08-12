@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>RPNerveToxin_Vial</defName>
+    <label>Nerve toxin vial</label>
+    <description>A neurological toxin made using special engineered nanintes.</description>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Resource/RPNerveToxin_Vial</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>150</stackLimit>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>159.5</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>0.7</Flammability>
+      <DeteriorationRate>3.0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>GGManufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeRPNerveToxin_Vial</defName>
+    <label>Make Nerve toxin vial</label>
+    <description>Make 1 nerve toxin vial</description>
+    <jobString>Making a nerve toxin vial</jobString>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <workSkill>Intellectual</workSkill>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>2000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RPMechanites</li>
+            <!--  120 -->
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GGLead</li>
+            <!--  27.5 -->
+            <li>RPHexane</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+            <!--  12 -->
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RPMechanites</li>
+        <li>GGLead</li>
+        <li>RPHexane</li>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <RPNerveToxin_Vial>1</RPNerveToxin_Vial>
+    </products>
+    <recipeUsers Inherit="false">
+      <li>GhostGearFab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>10</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>RimPlas_NerveToxin</researchPrerequisite>
+  </RecipeDef>
+</Defs>

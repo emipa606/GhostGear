@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- melee -->
+
+  <GGMStab.label>GG melee stab</GGMStab.label>
+  <GGMStab.description>GG melee stab effect</GGMStab.description>
+  <GGMStab.comps.0.labelTendedWell>bandaged</GGMStab.comps.0.labelTendedWell>
+  <GGMStab.comps.0.labelTendedWellInner>sutured</GGMStab.comps.0.labelTendedWellInner>
+  <GGMStab.comps.0.labelSolidTendedWell>set</GGMStab.comps.0.labelSolidTendedWell>
+  <GGMStab.injuryProps.destroyedLabel>Cut off</GGMStab.injuryProps.destroyedLabel>
+  <GGMStab.injuryProps.destroyedOutLabel>Cut out</GGMStab.injuryProps.destroyedOutLabel>
+  <GGMStab.labelNoun>a stab wound</GGMStab.labelNoun>
+
+  <GGMCut.label>GG melee cut</GGMCut.label>
+  <GGMCut.description>GG melee cut effect</GGMCut.description>
+  <GGMCut.comps.0.labelTendedWell>bandaged</GGMCut.comps.0.labelTendedWell>
+  <GGMCut.comps.0.labelTendedWellInner>sutured</GGMCut.comps.0.labelTendedWellInner>
+  <GGMCut.comps.0.labelSolidTendedWell>set</GGMCut.comps.0.labelSolidTendedWell>
+  <GGMCut.injuryProps.destroyedLabel>Cut off</GGMCut.injuryProps.destroyedLabel>
+  <GGMCut.injuryProps.destroyedOutLabel>Cut out</GGMCut.injuryProps.destroyedOutLabel>
+  <GGMCut.labelNoun>a melee cut</GGMCut.labelNoun>
+
+
+  <!-- thrown -->
+
+  <GGShurikenCut.label>GG shuriken cut</GGShurikenCut.label>
+  <GGShurikenCut.description>GG shuriken cut effect</GGShurikenCut.description>
+  <GGShurikenCut.comps.0.labelTendedWell>bandaged</GGShurikenCut.comps.0.labelTendedWell>
+  <GGShurikenCut.comps.0.labelTendedWellInner>sutured</GGShurikenCut.comps.0.labelTendedWellInner>
+  <GGShurikenCut.comps.0.labelSolidTendedWell>set</GGShurikenCut.comps.0.labelSolidTendedWell>
+  <GGShurikenCut.injuryProps.destroyedLabel>Cut off</GGShurikenCut.injuryProps.destroyedLabel>
+  <GGShurikenCut.injuryProps.destroyedOutLabel>Cut out</GGShurikenCut.injuryProps.destroyedOutLabel>
+  <GGShurikenCut.labelNoun>a shuriken cut</GGShurikenCut.labelNoun>
+
+  <GGStab.label>GG stab</GGStab.label>
+  <GGStab.description>GG stab effect</GGStab.description>
+  <GGStab.comps.0.labelTendedWell>bandaged</GGStab.comps.0.labelTendedWell>
+  <GGStab.comps.0.labelTendedWellInner>sutured</GGStab.comps.0.labelTendedWellInner>
+  <GGStab.comps.0.labelSolidTendedWell>set</GGStab.comps.0.labelSolidTendedWell>
+  <GGStab.injuryProps.destroyedLabel>Cut off</GGStab.injuryProps.destroyedLabel>
+  <GGStab.injuryProps.destroyedOutLabel>Cut out</GGStab.injuryProps.destroyedOutLabel>
+  <GGStab.labelNoun>a stab wound</GGStab.labelNoun>
+
+  <GGStabDart.label>GG dart stab</GGStabDart.label>
+  <GGStabDart.description>GG dart stab effect</GGStabDart.description>
+  <GGStabDart.comps.0.labelTendedWell>bandaged</GGStabDart.comps.0.labelTendedWell>
+  <GGStabDart.comps.0.labelTendedWellInner>sutured</GGStabDart.comps.0.labelTendedWellInner>
+  <GGStabDart.comps.0.labelSolidTendedWell>set</GGStabDart.comps.0.labelSolidTendedWell>
+  <GGStabDart.injuryProps.destroyedLabel>Cut off</GGStabDart.injuryProps.destroyedLabel>
+  <GGStabDart.injuryProps.destroyedOutLabel>Cut out</GGStabDart.injuryProps.destroyedOutLabel>
+  <GGStabDart.labelNoun>a stab wound</GGStabDart.labelNoun>
+
+
+</LanguageData>

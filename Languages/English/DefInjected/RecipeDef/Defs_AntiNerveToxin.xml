@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Recipes -->
+
+  <MakeAntiNerveToxin.label>Make Anti Nerve Toxin</MakeAntiNerveToxin.label>
+  <MakeAntiNerveToxin.description>Make 2 Anti Nerve Toxin tablets</MakeAntiNerveToxin.description>
+  <MakeAntiNerveToxin.jobString>Making Anti Nerve Toxin</MakeAntiNerveToxin.jobString>
+
+
+  <!-- Bulk Recipe -->
+
+  <MakeBulkAntiNerveToxin.label>Make Anti Nerve Toxin in bulk</MakeBulkAntiNerveToxin.label>
+  <MakeBulkAntiNerveToxin.description>Make 4 Anti Nerve Toxin tablets</MakeBulkAntiNerveToxin.description>
+  <MakeBulkAntiNerveToxin.jobString>Making Anti Nerve Toxin</MakeBulkAntiNerveToxin.jobString>
+
+
+</LanguageData>

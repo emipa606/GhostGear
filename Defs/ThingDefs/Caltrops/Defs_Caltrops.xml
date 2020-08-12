@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--  Caltrops -->
+  <ThingDef ParentName="BaseFilth">
+    <defName>Filth_GGCaltrops</defName>
+    <label>GG Caltrops</label>
+    <thingClass>GhostGear.GGCaltrops</thingClass>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <Beauty>0</Beauty>
+      <Cleanliness>0</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/GGCaltrops</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <pathCost>5</pathCost>
+    <filth>
+      <rainWashes>false</rainWashes>
+      <cleaningWorkToReduceThickness>120</cleaningWorkToReduceThickness>
+      <canFilthAttach>false</canFilthAttach>
+      <allowsFire>true</allowsFire>
+    </filth>
+  </ThingDef>
+  <!--  Caltrops Pod -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>GGCaltropsPod</defName>
+    <label>Ghost Gear Caltrops Pod</label>
+    <description>These pods contain a number of small devices that will explode when something steps on them. The explosion varies based on the type of thing that stepped onto it.</description>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Resource/GGCaltropsPod</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.95</drawSize>
+    </graphicData>
+    <stackLimit>20</stackLimit>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <MarketValue>633</MarketValue>
+      <Mass>0.5</Mass>
+      <Flammability>0.5</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>GGManufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeGGCaltropsPod</defName>
+    <label>Make Ghost Gear Caltrops Pod</label>
+    <description>Make 1 Ghost Gear Caltrops Pod</description>
+    <jobString>Making Ghost Gear Caltrops Pod.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>750</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Crafting</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RimPlasGraphene</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CarboPlasteel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RimPlasGraphene</li>
+        <li>CarboPlasteel</li>
+        <li>ComponentIndustrial</li>
+        <li>Chemfuel</li>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <GGCaltropsPod>1</GGCaltropsPod>
+    </products>
+    <recipeUsers>
+      <li>GhostGearFab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Crafting>9</Crafting>
+    </skillRequirements>
+    <researchPrerequisite>RimPlas_GGCaltrops</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeBulkGGCaltropsPod</defName>
+    <label>Make Ghost Gear Caltrops Pods in bulk</label>
+    <description>Make 3 Ghost Gear Caltrops Pods</description>
+    <jobString>Making Ghost Gear Caltrops Pods.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>2250</workAmount>
+    <targetCountAdjustment>3</targetCountAdjustment>
+    <workSkill>Crafting</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RimPlasGraphene</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CarboPlasteel</li>
+          </thingDefs>
+        </filter>
+        <count>60</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </filter>
+        <count>150</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RimPlasGraphene</li>
+        <li>CarboPlasteel</li>
+        <li>ComponentIndustrial</li>
+        <li>Chemfuel</li>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <GGCaltropsPod>3</GGCaltropsPod>
+    </products>
+    <recipeUsers>
+      <li>GhostGearFab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Crafting>10</Crafting>
+    </skillRequirements>
+    <researchPrerequisite>RimPlas_GGCaltrops</researchPrerequisite>
+  </RecipeDef>
+  <!--  Caltrops Shell -->
+  <ThingDef ParentName="MakeableShellBase">
+    <defName>Shell_GGCaltrops</defName>
+    <label>GG Caltrops shell</label>
+    <description>A pressurized shell filled with Ghost Gear Caltrops. Can be fired from mortars or installed as a trap.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Shell/Shell_GGCaltrops</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>5.9</explosiveRadius>
+        <explosiveDamageType>Damage_GGCaltrops</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.3</startWickHitPointsPercent>
+        <postExplosionSpawnThingDef>Filth_GGCaltrops</postExplosionSpawnThingDef>
+        <postExplosionSpawnChance>0.9</postExplosionSpawnChance>
+        <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+        <applyDamageToExplosionCellsNeighbors>false</applyDamageToExplosionCellsNeighbors>
+        <explosionEffect>ExtinguisherExplosion</explosionEffect>
+        <wickTicks>
+          <min>30</min>
+          <max>60</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <projectileWhenLoaded>Bullet_Shell_GGCaltrops</projectileWhenLoaded>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <GGCaltropsPod>1</GGCaltropsPod>
+    </costList>
+    <statBases>
+      <MarketValue>723</MarketValue>
+    </statBases>
+    <researchPrerequisites Inherit="false">
+      <li>Mortars</li>
+      <li>RimPlas_GGCaltrops</li>
+    </researchPrerequisites>
+    <thingCategories Inherit="false">
+      <li>MortarShells</li>
+    </thingCategories>
+    <recipeMaker>
+      <recipeUsers Inherit="false">
+        <li>GhostGearFab</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <techLevel>Ultra</techLevel>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Shell_GGCaltrops</defName>
+    <label>GG Caltrops shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/ShellGGCaltrops</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Damage_GGCaltrops</damageDef>
+      <!-- damage amount is the damage def default -->
+      <speed>41</speed>
+      <explosionRadius>5.9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>Explosion_EMP</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+      <postExplosionSpawnThingDef>Filth_GGCaltrops</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+      <applyDamageToExplosionCellsNeighbors>false</applyDamageToExplosionCellsNeighbors>
+      <explosionEffect>ExtinguisherExplosion</explosionEffect>
+    </projectile>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeBulkGGCaltropsShell</defName>
+    <label>Make GG Caltrops shells in bulk</label>
+    <description>Make 4 GG Caltrops shells</description>
+    <jobString>Making GG Caltrops shells.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workSkill>Crafting</workSkill>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>3200</workAmount>
+    <targetCountAdjustment>4</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GGCaltropsPod</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+        <li>GGCaltropsPod</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Shell_GGCaltrops>4</Shell_GGCaltrops>
+    </products>
+    <recipeUsers Inherit="false">
+      <li>GhostGearFab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Crafting>5</Crafting>
+    </skillRequirements>
+    <researchPrerequisite>RimPlas_GGCaltrops</researchPrerequisite>
+  </RecipeDef>
+  <ThingDef ParentName="TrapIEDBase">
+    <defName>TrapIED_GGCaltrops</defName>
+    <label>Caltrops trap</label>
+    <description>A pair of GG Caltrops shells connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <graphicData>
+      <texPath>Things/Buildings/Security/IEDGGCaltrops</texPath>
+    </graphicData>
+    <costList>
+      <Shell_GGCaltrops>2</Shell_GGCaltrops>
+    </costList>
+    <statBases>
+      <MarketValue>1446</MarketValue>
+    </statBases>
+    <designationHotKey>Misc10</designationHotKey>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>5.9</explosiveRadius>
+        <explosiveDamageType>Damage_GGCaltrops</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <postExplosionSpawnThingDef>Filth_GGCaltrops</postExplosionSpawnThingDef>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+        <applyDamageToExplosionCellsNeighbors>false</applyDamageToExplosionCellsNeighbors>
+        <explosionEffect>ExtinguisherExplosion</explosionEffect>
+        <wickTicks>
+          <min>15</min>
+          <max>15</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <specialDisplayRadius>7.9</specialDisplayRadius>
+    <researchPrerequisites Inherit="false">
+      <li>IEDs</li>
+      <li>RimPlas_GGCaltrops</li>
+    </researchPrerequisites>
+    <techLevel>Ultra</techLevel>
+  </ThingDef>
+</Defs>

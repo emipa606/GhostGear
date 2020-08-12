@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Dart -->
+
+  <GhostGearThrown_Dart.label>Ghost Dart</GhostGearThrown_Dart.label>
+  <GhostGearThrown_Dart.description>This dart is used mostly to deliver high concentrations of mechanite nerve toxin by injection.</GhostGearThrown_Dart.description>
+  <GhostGearThrown_Dart.tools.0.label>point</GhostGearThrown_Dart.tools.0.label>
+
+
+  <!-- T Knife -->
+
+  <GhostGearThrown_Knife.label>Ghost Throwing knife</GhostGearThrown_Knife.label>
+  <GhostGearThrown_Knife.description>A small sharp blade mainly used as a projectile that also delivers mechanite nerve toxin.</GhostGearThrown_Knife.description>
+  <GhostGearThrown_Knife.tools.0.label>point</GhostGearThrown_Knife.tools.0.label>
+
+
+  <!-- Shuriken -->
+
+  <GhostGearThrown_Shuriken.label>Ghost Shuriken</GhostGearThrown_Shuriken.label>
+  <GhostGearThrown_Shuriken.description>Shuriken, thrown star like projectiles that can also deliver mechanite nerve toxin.</GhostGearThrown_Shuriken.description>
+  <GhostGearThrown_Shuriken.tools.0.label>point</GhostGearThrown_Shuriken.tools.0.label>
+
+
+</LanguageData>

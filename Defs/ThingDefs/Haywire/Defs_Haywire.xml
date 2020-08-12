@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Haywire grenade -->
+  <!-- Base -->
+  <ThingDef Name="BaseGGGrenadeProjectile" Abstract="True">
+    <category>Projectile</category>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <label>projectile</label>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <projectile>
+      <speed>12</speed>
+      <flyOverhead>false</flyOverhead>
+    </projectile>
+  </ThingDef>
+  <ThingDef Name="BaseGGMakeableGrenade" ParentName="BaseWeapon" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers Inherit="false">
+        <li>GhostGearFab</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <researchPrerequisite>RimPlas_Haywire</researchPrerequisite>
+    </recipeMaker>
+    <generateCommonality>0.0</generateCommonality>
+    <weaponTags Inherit="false">
+      <li>AdvancedGGGrenadeEMP</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <techLevel>Ultra</techLevel>
+    <tickerType>Normal</tickerType>
+  </ThingDef>
+  <!-- Haywire EMP Grenade -->
+  <ThingDef ParentName="BaseGGMakeableGrenade">
+    <defName>GGHWEMPGrenades</defName>
+    <label>Haywire EMP grenades</label>
+    <description>Electromagnetic pulse grenades damaging to electronic equipment that release specialised haywire mechanites. The mechanites can confuse a mechanoids behaviour.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponRanged/Grenades/GGHWEMPGrenades</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <statBases>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <WorkToMake>24000</WorkToMake>
+    </statBases>
+    <costList>
+      <RimPlasGraphene>5</RimPlasGraphene>
+      <CarboPlasteel>20</CarboPlasteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+      <GGHWMechanites>1</GGHWMechanites>
+    </costList>
+    <verbs>
+      <li>
+        <label>throw HW EMP grenade</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>14.9</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>Proj_GGHWEMPGrenade</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>GGHaywireEMP</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+    <smeltProducts>
+      <CarboPlasteel>10</CarboPlasteel>
+    </smeltProducts>
+  </ThingDef>
+  <ThingDef ParentName="BaseGGGrenadeProjectile">
+    <defName>Proj_GGHWEMPGrenade</defName>
+    <label>HW EMP grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/GGHWEMPGrenade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>4.9</explosionRadius>
+      <damageDef>GGHaywireEMP</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionDelay>100</explosionDelay>
+    </projectile>
+  </ThingDef>
+  <!--  Shell -->
+  <ThingDef ParentName="MakeableShellBase">
+    <defName>Shell_GGHaywire</defName>
+    <label>Haywire shell</label>
+    <description>A pressurized shell filled with haywire nites. Can be fired from mortars or installed as a trap. Explodes when damaged.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Shell/Shell_GGHaywire</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>11.9</explosiveRadius>
+        <explosiveDamageType>GGHaywireEMP</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        <explosionEffect>ExtinguisherExplosion</explosionEffect>
+        <wickTicks>
+          <min>30</min>
+          <max>60</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <projectileWhenLoaded>Bullet_Shell_GGHaywire</projectileWhenLoaded>
+    <costList>
+      <RimPlasGraphene>2</RimPlasGraphene>
+      <CarboPlasteel>10</CarboPlasteel>
+      <GGHWMechanites>1</GGHWMechanites>
+    </costList>
+    <statBases>
+      <MarketValue>373.2</MarketValue>
+    </statBases>
+    <researchPrerequisites Inherit="false">
+      <li>Mortars</li>
+      <li>RimPlas_Haywire</li>
+    </researchPrerequisites>
+    <thingCategories Inherit="false">
+      <li>MortarShells</li>
+    </thingCategories>
+    <recipeMaker>
+      <recipeUsers Inherit="false">
+        <li>GhostGearFab</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <techLevel>Ultra</techLevel>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Shell_GGHaywire</defName>
+    <label>Haywire shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/ShellGGHaywire</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>GGHaywireEMP</damageDef>
+      <!-- damage amount is the damage def default -->
+      <speed>41</speed>
+      <explosionRadius>9.9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>Explosion_EMP</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+      <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+      <explosionEffect>ExtinguisherExplosion</explosionEffect>
+    </projectile>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeBulkGGHaywireShell</defName>
+    <label>Make Haywire shells in bulk</label>
+    <description>Make 4 Haywire shells</description>
+    <jobString>Making Haywire shells.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workSkill>Crafting</workSkill>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>3200</workAmount>
+    <targetCountAdjustment>4</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RimPlasGraphene</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CarboPlasteel</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GGHWMechanites</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RimPlasGraphene</li>
+        <li>CarboPlasteel</li>
+        <li>GGHWMechanites</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Shell_GGHaywire>4</Shell_GGHaywire>
+    </products>
+    <recipeUsers Inherit="false">
+      <li>GhostGearFab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <researchPrerequisite>RimPlas_Haywire</researchPrerequisite>
+  </RecipeDef>
+  <!--  IED -->
+  <ThingDef ParentName="TrapIEDBase">
+    <defName>TrapIED_GGHaywire</defName>
+    <label>IED Haywire trap</label>
+    <description>A haywire shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <graphicData>
+      <texPath>Things/Buildings/Security/IEDGGHaywire</texPath>
+    </graphicData>
+    <costList>
+      <Shell_GGHaywire>2</Shell_GGHaywire>
+    </costList>
+    <statBases>
+      <MarketValue>746.4</MarketValue>
+    </statBases>
+    <designationHotKey>Misc10</designationHotKey>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>12.9</explosiveRadius>
+        <explosiveDamageType>GGHaywireEMP</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        <explosionEffect>ExtinguisherExplosion</explosionEffect>
+        <wickTicks>
+          <min>15</min>
+          <max>15</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <specialDisplayRadius>12.9</specialDisplayRadius>
+    <researchPrerequisites Inherit="false">
+      <li>IEDs</li>
+      <li>RimPlas_Haywire</li>
+    </researchPrerequisites>
+    <techLevel>Ultra</techLevel>
+  </ThingDef>
+</Defs>

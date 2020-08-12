@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!--  Mod Settings -->
+  <GhostGear.Name>Ghost Gear</GhostGear.Name>
+  <GhostGear.ACamoEff>Global active Camouflage effectiveness (%):</GhostGear.ACamoEff>
+  <GhostGear.AllowRoofPunch>Allow roof punching with the use of the grapple hook:</GhostGear.AllowRoofPunch>
+  <GhostGear.AllowDanger>Ignore Danger when using grapple hook:</GhostGear.AllowDanger>
+  <GhostGear.MinGhostDist>Ghosting Minimum range:</GhostGear.MinGhostDist>
+  <GhostGear.MaxGhostDist>Ghosting Maximum range</GhostGear.MaxGhostDist>
+  <GhostGear.ShowConfusion>Show Ghosting confusion motes on pawns:</GhostGear.ShowConfusion>
+  <GhostGear.HWChance>Relative base chance (%) for haywire EMP to effect mechanoids:</GhostGear.HWChance>
+  <GhostGear.GHSpeed>Relative base speed (%) of use of the grappling hook:</GhostGear.GHSpeed>
+  <GhostGear.GHInj>Base chance (%) to receive injuries from roof punching:</GhostGear.GHInj>
+  <GhostGear.CaltropDuration>No. of Hours that caltrops remain before expiring:</GhostGear.CaltropDuration>
+  <GhostGear.DoAutoRearm>Allow colonists to auto-rearm Ghost Gear armour with Caltrops:</GhostGear.DoAutoRearm>
+  <GhostGear.ShowAutoRearmMsg>Show rearming notification messages:</GhostGear.ShowAutoRearmMsg>
+  <GhostGear.ResPct>Relative cost for research %:</GhostGear.ResPct>
+  <GhostGear.ResTip>Note changes to research costs will only take effect when RimWorld is restarted.</GhostGear.ResTip>
+  <GhostGear.ResWarn>(Warning: increasing the % will mean research will become incomplete using the previous value.)</GhostGear.ResWarn>
+  <!--  Content -->
+  <!--  Ghosting -->
+  <GhostGear.ConfusedMsg>???!</GhostGear.ConfusedMsg>
+  <!--  Haywire -->
+  <GhostGear.HayWired>Haywired</GhostGear.HayWired>
+  <!-- Active Camo  -->
+  <GhostGear.CannotSeeGhost>Cannot see Ghost: C({0}) S({1})</GhostGear.CannotSeeGhost>
+  <!--  Debug Mote, No translation needed -->
+  <GhostGear.CanSeeGhost>Can see Ghost: C({0}) S({1})</GhostGear.CanSeeGhost>
+  <!--  Debug Mote, No translation needed-->
+  <GhostGear.ActiveCamoLabel>Active Camo</GhostGear.ActiveCamoLabel>
+  <GhostGear.ActiveCamoDesc>Click to change Active Camo state</GhostGear.ActiveCamoDesc>
+  <!--  Repulsor -->
+  <GhostGear.RepulseLabel>Repulse Burst</GhostGear.RepulseLabel>
+  <GhostGear.RepulseDesc>Click to activate</GhostGear.RepulseDesc>
+  <GhostGear.DoNothing>Do Nothing</GhostGear.DoNothing>
+  <GhostGear.DoRepulse>Activate</GhostGear.DoRepulse>
+  <!--  Grapple Hook -->
+  <GhostGear.GrappleHook>Grapple</GhostGear.GrappleHook>
+  <GhostGear.GrappleHookDesc>Use to climb over adjacent walls.</GhostGear.GrappleHookDesc>
+  <!--  Caltrops -->
+  <GhostGear.CaltropsLabel>Caltrops: (Uses: {1})</GhostGear.CaltropsLabel>
+  <GhostGear.CaltropsDesc>Click for Caltrops menu options</GhostGear.CaltropsDesc>
+  <GhostGear.DoCaltrops>Drop Caltrops</GhostGear.DoCaltrops>
+  <GhostGear.CaltropsRearm>Rearm with Caltrop pods</GhostGear.CaltropsRearm>
+  <GhostGear.NoCaltropsFound>Couldn't find any Caltrops for {0}.</GhostGear.NoCaltropsFound>
+  <GhostGear.IsFullyRearmed>{0} is already fully armed.</GhostGear.IsFullyRearmed>
+  <GhostGear.CantDo>{0} cannot rearm {2} due to {1}</GhostGear.CantDo>
+  <GhostGear.ReasonNotFound>wearer not being found.</GhostGear.ReasonNotFound>
+  <GhostGear.ReasonOnFire>being on fire.</GhostGear.ReasonOnFire>
+  <GhostGear.ReasonDead>being dead.</GhostGear.ReasonDead>
+  <GhostGear.ReasonMental>being mentally incapable.</GhostGear.ReasonMental>
+  <GhostGear.ReasonIncap>being incapacitated.</GhostGear.ReasonIncap>
+  <GhostGear.ReasonOperate>unable to operate it.</GhostGear.ReasonOperate>
+  <GhostGear.CaltropsRearmed>{0}'s {1} has been rearmed by {2} unit{3} of {4}s</GhostGear.CaltropsRearmed>
+  <GhostGear.FullyRearmed>{0}'s {1} has been fully rearmed with {2}s</GhostGear.FullyRearmed>
+
+</LanguageData>

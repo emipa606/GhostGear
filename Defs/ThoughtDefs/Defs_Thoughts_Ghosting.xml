@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <defName>GGConfused</defName>
+    <icon>Things/Mote/ThoughtSymbol/GGConfused</icon>
+    <showBubble>true</showBubble>
+    <durationDays>0.125</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>Ghosting confusion</label>
+        <description>Confused by Ghosting effect</description>
+        <baseMoodEffect>-1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

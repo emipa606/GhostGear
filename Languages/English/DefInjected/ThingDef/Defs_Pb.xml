@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Galena -->
+
+  <GGGalena.label>Galena</GGGalena.label>
+  <GGGalena.description>A natural mineral used as a source for lead.</GGGalena.description>
+
+
+  <!-- Lead -->
+
+  <GGLead.label>Lead</GGLead.label>
+  <GGLead.description>A soft metal that has a low melting point, good ductility and high toxicity.</GGLead.description>
+  <GGLead.stuffProps.stuffAdjective>Lead</GGLead.stuffProps.stuffAdjective>
+
+
+</LanguageData>

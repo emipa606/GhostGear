@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Base -->
+  <ThingDef Name="BaseGhostGearThrown" ParentName="BaseWeapon" Abstract="True">
+    <techLevel>Ultra</techLevel>
+    <weaponTags>
+      <li>GGAdvancedThrown</li>
+    </weaponTags>
+    <generateCommonality>0.0</generateCommonality>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <statBases>
+      <WorkToMake>9000</WorkToMake>
+    </statBases>
+    <costList>
+      <RimPlasGraphene>5</RimPlasGraphene>
+      <CarboPlasteel>25</CarboPlasteel>
+      <RPNerveToxin_Vial>1</RPNerveToxin_Vial>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers Inherit="false">
+        <li>GhostGearFab</li>
+      </recipeUsers>
+      <effectWorking>Smelt</effectWorking>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <researchPrerequisite>RimPlas_NerveToxin</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <!-- Dart -->
+  <ThingDef ParentName="BaseGhostGearThrown">
+    <defName>GhostGearThrown_Dart</defName>
+    <label>Ghost Dart</label>
+    <description>This dart is used mostly to deliver high concentrations of mechanite nerve toxin by injection.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponRanged/Thrown/GGThrown_Dart</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <statBases>
+      <Mass>0.5</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.22</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>GGDart_Thrown</defaultProjectile>
+        <warmupTime>0.7</warmupTime>
+        <range>22</range>
+        <soundCast>Interact_BeatFire</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>GGMStab</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0.85</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+  <!-- T Knife -->
+  <ThingDef ParentName="BaseGhostGearThrown">
+    <defName>GhostGearThrown_Knife</defName>
+    <label>Ghost Throwing knife</label>
+    <description>A small sharp blade mainly used as a projectile that also delivers mechanite nerve toxin.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponRanged/Thrown/GGThrown_Knife</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <statBases>
+      <Mass>0.5</Mass>
+      <AccuracyTouch>0.78</AccuracyTouch>
+      <AccuracyShort>0.82</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.20</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>GGKnife_Thrown</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>18</range>
+        <soundCast>Interact_BeatFire</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>GGMStab</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0.9</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+  <!-- Shuriken -->
+  <ThingDef ParentName="BaseGhostGearThrown">
+    <defName>GhostGearThrown_Shuriken</defName>
+    <label>Ghost Shuriken</label>
+    <description>Shuriken, thrown star like projectiles that can also deliver mechanite nerve toxin.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponRanged/Thrown/GGThrown_Shuriken</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <statBases>
+      <Mass>0.3</Mass>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.30</AccuracyLong>
+      <RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>GGShuriken_Thrown</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>30</range>
+        <soundCast>Interact_BeatFire</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>GGMStab</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0.85</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

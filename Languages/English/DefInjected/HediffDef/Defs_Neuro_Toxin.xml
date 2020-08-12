@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <GGNerveToxin.label>Nerve toxin</GGNerveToxin.label>
+  <GGNerveToxin.description>Nerve toxin effect</GGNerveToxin.description>
+  <GGNerveToxin.stages.0.label>Recovering</GGNerveToxin.stages.0.label>
+  <GGNerveToxin.stages.1.label>Mild</GGNerveToxin.stages.1.label>
+  <GGNerveToxin.stages.2.label>minor</GGNerveToxin.stages.2.label>
+  <GGNerveToxin.stages.3.label>moderate</GGNerveToxin.stages.3.label>
+  <GGNerveToxin.stages.4.label>serious</GGNerveToxin.stages.4.label>
+
+
+</LanguageData>

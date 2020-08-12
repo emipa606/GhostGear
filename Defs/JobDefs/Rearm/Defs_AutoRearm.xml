@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--  Ghost Gear Jobs Rearm -->
+  <JobDef>
+    <defName>GGRearmCaltrops</defName>
+    <driverClass>GhostGear.JobDriver_GGRearmCaltrops</driverClass>
+    <reportString>resupplying armour with TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+  </JobDef>
+  <ThinkTreeDef>
+    <defName>GGAutoRearmCheck</defName>
+    <insertTag>Humanlike_PreMain</insertTag>
+    <insertPriority>101</insertPriority>
+    <thinkRoot Class="GhostGear.ThinkNode_CanRearmGGCaltrops">
+      <subNodes>
+        <li Class="ThinkNode_Priority">
+          <subNodes>
+            <li Class="GhostGear.JobGiver_GGAutoRearm" />
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</Defs>

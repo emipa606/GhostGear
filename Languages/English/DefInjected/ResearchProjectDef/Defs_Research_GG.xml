@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <RimPlas_GhostGear.label>Ghost Gear</RimPlas_GhostGear.label>
+  <RimPlas_GhostGear.description>Grants the ability to make complex graphene based equipment.</RimPlas_GhostGear.description>
+
+
+  <!-- <ResearchProjectDef>
+		<defName>RimPlas_ActiveCamo</defName>
+		<label>Ghost Gear Active Camouflage</label>
+		<description>Grants the ability to use active camouflage on Ghost Gear.</description>
+		<baseCost>3000</baseCost>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>RimPlas_GhostGear</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>RimPlas_GhostGear</tab>
+	</ResearchProjectDef> -->
+
+  <RimPlas_GGCaltrops.label>Caltrops (Ghost Gear)</RimPlas_GGCaltrops.label>
+  <RimPlas_GGCaltrops.description>Grants the ability to make Ghost Gear Caltrops.</RimPlas_GGCaltrops.description>
+
+  <RimPlas_NerveToxin.label>Nanite nerve toxin</RimPlas_NerveToxin.label>
+  <RimPlas_NerveToxin.description>Grants the ability to make nanite nerve toxins. These can be used to attack neurological functioning. Can be mitigated with toxic immunity.</RimPlas_NerveToxin.description>
+
+  <RimPlas_Haywire.label>Haywire Tech</RimPlas_Haywire.label>
+  <RimPlas_Haywire.description>Grants the ability to make haywire tech. Haywire tech can be used to disable and stun mechanoids.</RimPlas_Haywire.description>
+
+
+</LanguageData>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Industrialisation</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <RecipeDef ParentName="Ind_DeepMineBase">
+              <defName>GGInd_DeepMineGGGalena</defName>
+              <label>Mine deep galena</label>
+              <description>Mine deep galena.</description>
+              <workAmount>3000</workAmount>
+              <products>
+                <GGGalena>25</GGGalena>
+              </products>
+            </RecipeDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <RecipeDef>
+              <defName>MakeGGLeadEArc</defName>
+              <label>Smelt Lead</label>
+              <description>Smelt 5 lead</description>
+              <jobString>Smelting lead</jobString>
+              <workSpeedStat>SmeltingSpeed</workSpeedStat>
+              <effectWorking>Smelt</effectWorking>
+              <soundWorking>Recipe_Smelt</soundWorking>
+              <workSkill>Crafting</workSkill>
+              <allowMixingIngredients>true</allowMixingIngredients>
+              <workAmount>750</workAmount>
+              <targetCountAdjustment>5</targetCountAdjustment>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>GGGalena</li>
+                    </thingDefs>
+                  </filter>
+                  <count>25</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>GGGalena</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <GGLead>5</GGLead>
+              </products>
+              <recipeUsers>
+                <li>Ind_ElectricArcFurnace</li>
+              </recipeUsers>
+              <skillRequirements>
+                <Crafting>5</Crafting>
+              </skillRequirements>
+              <researchPrerequisite>Electricity</researchPrerequisite>
+            </RecipeDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <RecipeDef>
+              <defName>MakeBulkGGLeadEArc</defName>
+              <label>Smelt Lead in bulk</label>
+              <description>Smelt 15 lead</description>
+              <jobString>Smelting lead</jobString>
+              <workSpeedStat>SmeltingSpeed</workSpeedStat>
+              <effectWorking>Smelt</effectWorking>
+              <soundWorking>Recipe_Smelt</soundWorking>
+              <workSkill>Crafting</workSkill>
+              <allowMixingIngredients>true</allowMixingIngredients>
+              <workAmount>2250</workAmount>
+              <targetCountAdjustment>15</targetCountAdjustment>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>GGGalena</li>
+                    </thingDefs>
+                  </filter>
+                  <count>75</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>GGGalena</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <GGLead>15</GGLead>
+              </products>
+              <recipeUsers>
+                <li>Ind_ElectricArcFurnace</li>
+              </recipeUsers>
+              <skillRequirements>
+                <Crafting>6</Crafting>
+              </skillRequirements>
+              <researchPrerequisite>Electricity</researchPrerequisite>
+            </RecipeDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
