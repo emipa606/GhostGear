@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>GGGrappleHook</defName>
+    <driverClass>GhostGear.JobDriver_GGGrappleHook</driverClass>
+    <reportString>using grappling hook.</reportString>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <suspendable>false</suspendable>
+    <casualInterruptible>false</casualInterruptible>
+    <collideWithPawns>true</collideWithPawns>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+    <checkOverrideOnDamage>Never</checkOverrideOnDamage>
+  </JobDef>
+</Defs>

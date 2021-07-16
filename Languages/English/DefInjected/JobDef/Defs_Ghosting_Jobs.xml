@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Ghosting confusion -->
-
   <GGWaitConfused.reportString>confused (ghosted).</GGWaitConfused.reportString>
   <GGFleeConfused.reportString>fleeing (ghosted).</GGFleeConfused.reportString>
-
-
 </LanguageData>

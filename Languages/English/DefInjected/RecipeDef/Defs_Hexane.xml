@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <MakeRPHexane.label>Make Hexane</MakeRPHexane.label>
   <MakeRPHexane.description>Make 25 Hexane</MakeRPHexane.description>
   <MakeRPHexane.jobString>Making Hexane</MakeRPHexane.jobString>
-
-
 </LanguageData>

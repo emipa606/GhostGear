@@ -1,22 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Caltrops Pod -->
-
   <MakeGGCaltropsPod.label>Make Ghost Gear Caltrops Pod</MakeGGCaltropsPod.label>
   <MakeGGCaltropsPod.description>Make 1 Ghost Gear Caltrops Pod</MakeGGCaltropsPod.description>
   <MakeGGCaltropsPod.jobString>Making Ghost Gear Caltrops Pod.</MakeGGCaltropsPod.jobString>
-
   <MakeBulkGGCaltropsPod.label>Make Ghost Gear Caltrops Pods in bulk</MakeBulkGGCaltropsPod.label>
   <MakeBulkGGCaltropsPod.description>Make 3 Ghost Gear Caltrops Pods</MakeBulkGGCaltropsPod.description>
   <MakeBulkGGCaltropsPod.jobString>Making Ghost Gear Caltrops Pods.</MakeBulkGGCaltropsPod.jobString>
-
-
   <!-- Caltrops Shell -->
-
   <MakeBulkGGCaltropsShell.label>Make GG Caltrops shells in bulk</MakeBulkGGCaltropsShell.label>
   <MakeBulkGGCaltropsShell.description>Make 4 GG Caltrops shells</MakeBulkGGCaltropsShell.description>
   <MakeBulkGGCaltropsShell.jobString>Making GG Caltrops shells.</MakeBulkGGCaltropsShell.jobString>
-
-
 </LanguageData>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchTabDef>
+    <defName>RimPlas_GhostGear</defName>
+    <label>RimPlas Ghost Gear</label>
+  </ResearchTabDef>
+  <ResearchProjectDef>
+    <defName>RimPlas_GhostGear</defName>
+    <label>Ghost Gear</label>
+    <description>Grants the ability to make complex graphene based equipment.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>RimPlas_Graphene</li>
+      <li>RimPlas_CarbonComposites</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>RimPlas_GhostGear</tab>
+  </ResearchProjectDef>
+  <!--
+	<ResearchProjectDef>
+		<defName>RimPlas_ActiveCamo</defName>
+		<label>Ghost Gear Active Camouflage</label>
+		<description>Grants the ability to use active camouflage on Ghost Gear.</description>
+		<baseCost>3000</baseCost>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>RimPlas_GhostGear</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>RimPlas_GhostGear</tab>
+	</ResearchProjectDef>
+	-->
+  <ResearchProjectDef>
+    <defName>RimPlas_GGCaltrops</defName>
+    <label>Caltrops (Ghost Gear)</label>
+    <description>Grants the ability to make Ghost Gear Caltrops.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>RimPlas_GhostGear</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>RimPlas_GhostGear</tab>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RimPlas_NerveToxin</defName>
+    <label>Nanite nerve toxin</label>
+    <description>Grants the ability to make nanite nerve toxins. These can be used to attack neurological functioning. Can be mitigated with toxic immunity.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>RimPlas_GhostGear</li>
+      <li>RimPlas_AdvIntelMats</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>RimPlas_GhostGear</tab>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>RimPlas_Haywire</defName>
+    <label>Haywire Tech</label>
+    <description>Grants the ability to make haywire tech. Haywire tech can be used to disable and stun mechanoids.</description>
+    <baseCost>2500</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>RimPlas_GhostGear</li>
+      <li>RimPlas_AdvIntelMats</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>RimPlas_GhostGear</tab>
+  </ResearchProjectDef>
+</Defs>

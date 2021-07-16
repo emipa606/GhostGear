@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- melee -->
-
   <GGMStab.label>GG melee stab</GGMStab.label>
   <GGMStab.description>GG melee stab effect</GGMStab.description>
   <GGMStab.comps.0.labelTendedWell>bandaged</GGMStab.comps.0.labelTendedWell>
@@ -11,7 +9,6 @@
   <GGMStab.injuryProps.destroyedLabel>Cut off</GGMStab.injuryProps.destroyedLabel>
   <GGMStab.injuryProps.destroyedOutLabel>Cut out</GGMStab.injuryProps.destroyedOutLabel>
   <GGMStab.labelNoun>a stab wound</GGMStab.labelNoun>
-
   <GGMCut.label>GG melee cut</GGMCut.label>
   <GGMCut.description>GG melee cut effect</GGMCut.description>
   <GGMCut.comps.0.labelTendedWell>bandaged</GGMCut.comps.0.labelTendedWell>
@@ -20,10 +17,7 @@
   <GGMCut.injuryProps.destroyedLabel>Cut off</GGMCut.injuryProps.destroyedLabel>
   <GGMCut.injuryProps.destroyedOutLabel>Cut out</GGMCut.injuryProps.destroyedOutLabel>
   <GGMCut.labelNoun>a melee cut</GGMCut.labelNoun>
-
-
   <!-- thrown -->
-
   <GGShurikenCut.label>GG shuriken cut</GGShurikenCut.label>
   <GGShurikenCut.description>GG shuriken cut effect</GGShurikenCut.description>
   <GGShurikenCut.comps.0.labelTendedWell>bandaged</GGShurikenCut.comps.0.labelTendedWell>
@@ -32,7 +26,6 @@
   <GGShurikenCut.injuryProps.destroyedLabel>Cut off</GGShurikenCut.injuryProps.destroyedLabel>
   <GGShurikenCut.injuryProps.destroyedOutLabel>Cut out</GGShurikenCut.injuryProps.destroyedOutLabel>
   <GGShurikenCut.labelNoun>a shuriken cut</GGShurikenCut.labelNoun>
-
   <GGStab.label>GG stab</GGStab.label>
   <GGStab.description>GG stab effect</GGStab.description>
   <GGStab.comps.0.labelTendedWell>bandaged</GGStab.comps.0.labelTendedWell>
@@ -41,7 +34,6 @@
   <GGStab.injuryProps.destroyedLabel>Cut off</GGStab.injuryProps.destroyedLabel>
   <GGStab.injuryProps.destroyedOutLabel>Cut out</GGStab.injuryProps.destroyedOutLabel>
   <GGStab.labelNoun>a stab wound</GGStab.labelNoun>
-
   <GGStabDart.label>GG dart stab</GGStabDart.label>
   <GGStabDart.description>GG dart stab effect</GGStabDart.description>
   <GGStabDart.comps.0.labelTendedWell>bandaged</GGStabDart.comps.0.labelTendedWell>
@@ -50,6 +42,4 @@
   <GGStabDart.injuryProps.destroyedLabel>Cut off</GGStabDart.injuryProps.destroyedLabel>
   <GGStabDart.injuryProps.destroyedOutLabel>Cut out</GGStabDart.injuryProps.destroyedOutLabel>
   <GGStabDart.labelNoun>a stab wound</GGStabDart.labelNoun>
-
-
 </LanguageData>

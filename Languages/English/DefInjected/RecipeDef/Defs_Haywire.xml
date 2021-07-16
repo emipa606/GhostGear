@@ -1,11 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Shell -->
-
   <MakeBulkGGHaywireShell.label>Make Haywire shells in bulk</MakeBulkGGHaywireShell.label>
   <MakeBulkGGHaywireShell.description>Make 4 Haywire shells</MakeBulkGGHaywireShell.description>
   <MakeBulkGGHaywireShell.jobString>Making Haywire shells.</MakeBulkGGHaywireShell.jobString>
-
-
 </LanguageData>

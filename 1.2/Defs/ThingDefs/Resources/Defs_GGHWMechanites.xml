@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>GGHWMechanites</defName>
+    <label>Haywire Mechanites</label>
+    <description>A cannister of haywire mechanites stored under pressure. These mechanites are mostly used in haywire tech to be used to disrupt mechanoid AI.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/GGHWMechanites</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>20</stackLimit>
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>217</MarketValue>
+      <Mass>2.0</Mass>
+      <Flammability>0.6</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>GGManufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>5.9</explosiveRadius>
+        <explosiveDamageType>GGHaywireEMP</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.5</startWickHitPointsPercent>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        <explosionEffect>ExtinguisherExplosion</explosionEffect>
+        <wickTicks>
+          <min>30</min>
+          <max>60</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <tickerType>Normal</tickerType>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeGGHWMechanites</defName>
+    <label>Make Haywire mechanites</label>
+    <description>Make 1 Haywire mechanites</description>
+    <jobString>Making Haywire mechanites</jobString>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <workSkill>Intellectual</workSkill>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>2500</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RPMechanites</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Luciferium</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RPMechanites</li>
+        <li>Luciferium</li>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <GGHWMechanites>1</GGHWMechanites>
+    </products>
+    <recipeUsers Inherit="false">
+      <li>GhostGearFab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>12</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>RimPlas_Haywire</researchPrerequisite>
+  </RecipeDef>
+</Defs>

@@ -1,16 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Shuriken Bullet -->
-
   <Bullet_GGShuriken.label>shuriken</Bullet_GGShuriken.label>
-
-
   <!-- Throwing darts, knifes etc. -->
-
   <GGKnife_Thrown.label>GG knife</GGKnife_Thrown.label>
   <GGShuriken_Thrown.label>GG Shuriken</GGShuriken_Thrown.label>
   <GGDart_Thrown.label>GG Dart</GGDart_Thrown.label>
-
-
 </LanguageData>

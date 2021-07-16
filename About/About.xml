@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Ghost Gear (Continued)</name>
   <packageId>Mlie.GhostGear</packageId>
@@ -7,6 +7,7 @@
   <supportedVersions>
     <li>1.1</li>
     <li>1.2</li>
+    <li>1.3</li>
   </supportedVersions>
   <modDependencies>
     <li>
@@ -26,55 +27,70 @@
     <li>brrainz.harmony</li>
     <li>Mlie.RimPlas</li>
   </loadAfter>
-  <description>Update of peladors mod
+  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2015562690
 
-[img]https://i.imgur.com/GYswkZ7.png[/img]
+[img]https://i.imgur.com/7Gzt3Rg.png[/img]
 
-Support-chat:
-https://invite.gg/mlie
-
-Non-steam version:
-https://github.com/emipa606/GhostGear
+[table]
+	[tr]
+		[td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+		[td][url=https://github.com/emipa606/GhostGear][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+	[/tr]
+[/table]
 	
---- Original Description ---
-Overview
+[img]https://i.imgur.com/NOW7jU1.png[/img]
 
-Ultra tech shielded armour with unique "ghosting" capabilities, defensive proximity burst, caltrops pods, grappling hook and high tech rail weapons using neuro-toxins and shuriken ammunition.
+[h1]Overview[/h1] V1.1
+
+Ultra tech shielded armour with unique &quot;ghosting&quot; capabilities, defensive proximity burst, caltrops pods, grappling hook and high tech rail weapons using neuro-toxins and shuriken ammunition. 
 
 Haywire tech, effective against mechanoids.
 
 It is provided as an expansion mod for RimPlas that makes use of the advanced material options provided.
 
 
-Mod Details
+[h1]Mod Details[/h1]
 
 Details for this mod are provided in a PDF Document:
 
-Ghost Gear Notes
-https://1drv.ms/b/s!Au3GsmKyQkDYivld9ATGSE6toE-jaw?e=ABY4KR
+[url=https://1drv.ms/b/s!Au3GsmKyQkDYivld9ATGSE6toE-jaw?e=ABY4KR]Ghost Gear Notes[/url]
 
 
-Mod Compatibilities
-*** Subject to conversion ***
+[h1]Mod Compatibilities[/h1] *** Subject to conversion ***
 
-Camouflage and Stealth - enables both passive and active camouflage on Ghost Gear power armour.
-Diseases Overhauled - Nerve Antitoxin can be used to cure Lymphatic mechanites.
-Industrialisation - Galena can be deep mined and smelting recipes for lead provided for the electric arc furnace.
-Medical Supplements - Ethyl Mercury used as an optional neurotoxin precursor, Antinites will cure nerve toxin.
-Rimatomics - Power Armour helmet will provide some radiation protection.
-Tactical Charge Gear - Additional delivery systems for Haywire tech.
-Utility Supplements - Mind killer liquid can be used as an optional neurotoxin.
-VFE - Production - Dedicated fabrication bench will make use of add-ons/attachments.
+[b]Camouflage and Stealth[/b] - enables both passive and active camouflage on Ghost Gear power armour.
+[b]Diseases Overhauled[/b] - Nerve Antitoxin can be used to cure Lymphatic mechanites.
+[b]Industrialisation[/b] - Galena can be deep mined and smelting recipes for lead provided for the electric arc furnace.
+[b]Medical Supplements[/b] - Ethyl Mercury used as an optional neurotoxin precursor, Antinites will cure nerve toxin.
+[b]Rimatomics[/b] - Power Armour helmet will provide some radiation protection.
+[b]Tactical Charge Gear[/b] - Additional delivery systems for Haywire tech.
+[b]Utility Supplements[/b] - Mind killer liquid can be used as an optional neurotoxin.
+[b]VFE - Production[/b] - Dedicated fabrication bench will make use of add-ons/attachments.
 
 Includes native Multiplayer support.
 
 The mod is not currently patched for CE at this time.
 
 
-Credits
+[h1]Credits[/h1]
 
 Oskar Potocki - Power armour and weaponry artwork.
 
-(CC BY-NC-SA 4.0)</description>
+
+(CC BY-NC-SA 4.0)
+
+
+[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]
+</description>
 </ModMetaData>
+

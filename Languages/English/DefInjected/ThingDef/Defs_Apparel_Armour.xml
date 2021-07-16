@@ -1,16 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Helmet -->
-
   <Apparel_PowerArmorGhostGearHelmet.label>Ghost Gear Helmet</Apparel_PowerArmorGhostGearHelmet.label>
   <Apparel_PowerArmorGhostGearHelmet.description>Made from advanced intelligent materials it is lighter than a regular marine helmet and with less protection, but offers good environmental protection.</Apparel_PowerArmorGhostGearHelmet.description>
-
-
   <!-- Armour -->
-
   <Apparel_PowerArmorGhostGear.label>Ghost Gear Power Armor</Apparel_PowerArmorGhostGear.label>
   <Apparel_PowerArmorGhostGear.description>Made from advanced intelligent materials it is lighter and faster than regular power armour, but with less protection. But includes an integrated shield, grappling hook and EMP/Stun/Smoke burst for emergencies.</Apparel_PowerArmorGhostGear.description>
-
-
 </LanguageData>

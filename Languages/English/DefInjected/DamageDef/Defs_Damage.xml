@@ -1,37 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Melee -->
-
   <GGMStab.label>GG melee stab</GGMStab.label>
   <GGMStab.deathMessage>{0} has been stabbed to death.</GGMStab.deathMessage>
-
   <GGMCut.label>GG melee cut</GGMCut.label>
   <GGMCut.deathMessage>{0} has been sliced to death.</GGMCut.deathMessage>
-
-
   <!-- Thrown -->
-
   <GGShuriken.label>GG Shuriken</GGShuriken.label>
   <GGShuriken.deathMessage>{0} has been shot to death by shuriken.</GGShuriken.deathMessage>
-
   <GGRangedStab.label>GG stab</GGRangedStab.label>
   <GGRangedStab.deathMessage>{0} has been stabbed to death.</GGRangedStab.deathMessage>
-
   <GGRangedStabDart.label>GG stab dart</GGRangedStabDart.label>
   <GGRangedStabDart.deathMessage>{0} has been stabbed to death.</GGRangedStabDart.deathMessage>
-
-
   <!-- Haywire -->
-
   <GGHaywireEMP.label>Haywire EMP</GGHaywireEMP.label>
   <GGHaywireEMP.deathMessage>{0} has been EMPed to death.</GGHaywireEMP.deathMessage>
-
-
   <!-- Caltrops Damage -->
-
   <Damage_GGCaltrops.label>GG Caltrops Damage</Damage_GGCaltrops.label>
   <Damage_GGCaltrops.deathMessage>{0} has been killed.</Damage_GGCaltrops.deathMessage>
-
-
 </LanguageData>

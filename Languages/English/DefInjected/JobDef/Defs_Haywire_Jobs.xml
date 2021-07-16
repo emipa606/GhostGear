@@ -1,25 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Attack -->
-
   <HWAttackPawn.reportString>attacking TargetA (haywired).</HWAttackPawn.reportString>
   <HWAttackThing.reportString>attacking TargetA (haywired).</HWAttackThing.reportString>
-
-
   <!-- Break Down -->
-
   <HWBreakDown.reportString>breaking down (haywired).</HWBreakDown.reportString>
-
-
   <!-- Explosion -->
-
   <HWExplosion.reportString>exploding (haywired).</HWExplosion.reportString>
-
-
   <!-- Wandering -->
-
   <HWWander.reportString>wandering (haywired).</HWWander.reportString>
-
-
 </LanguageData>

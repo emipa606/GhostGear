@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Guns -->
+  <!-- Base -->
+  <ThingDef Name="BaseGhostGearGun" ParentName="BaseWeapon" Abstract="True">
+    <techLevel>Ultra</techLevel>
+    <smeltable>true</smeltable>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <tickerType>Normal</tickerType>
+    <weaponTags Inherit="False">
+      <li>GGAdvancedGun</li>
+    </weaponTags>
+    <generateCommonality>0.0</generateCommonality>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef Name="BaseGhostGearMakeableGun" ParentName="BaseGhostGearGun" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers Inherit="false">
+        <li>GhostGearFab</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <researchPrerequisite>RimPlas_NerveToxin</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  <!-- Pistol -->
+  <ThingDef ParentName="BaseGhostGearMakeableGun">
+    <defName>Gun_GhostGear_Pistol</defName>
+    <label>Ghost Autopistol</label>
+    <description>Rapid fires shuriken ammo that is laden with mechanite nerve toxin.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponRanged/Guns/GG_Pistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <statBases>
+      <Mass>2</Mass>
+      <WorkToMake>70000</WorkToMake>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.78</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.21</AccuracyLong>
+      <RangedWeapon_Cooldown>0.70</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RimPlas_NerveToxin</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <RimPlasGraphene>25</RimPlasGraphene>
+      <CarboPlasteel>120</CarboPlasteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Uranium>3</Uranium>
+      <RPNerveToxin_Vial>1</RPNerveToxin_Vial>
+    </costList>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GGShuriken</defaultProjectile>
+        <warmupTime>0.25</warmupTime>
+        <range>25</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>GGShuriken_Bullet</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>1</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!-- Rifle -->
+  <ThingDef ParentName="BaseGhostGearMakeableGun">
+    <defName>Gun_GhostGear_Rifle</defName>
+    <label>Ghost Rifle</label>
+    <description>A multi purpose weapon that rapid fires shuriken ammo that is laden with mechanite nerve toxin.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponRanged/Guns/GG_Rifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <soundInteract>Interact_SMG</soundInteract>
+    <statBases>
+      <Mass>5</Mass>
+      <WorkToMake>92500</WorkToMake>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>0.90</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>RimPlas_NerveToxin</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <RimPlasGraphene>25</RimPlasGraphene>
+      <CarboPlasteel>200</CarboPlasteel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Uranium>5</Uranium>
+      <RPNerveToxin_Vial>1</RPNerveToxin_Vial>
+    </costList>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GGShuriken</defaultProjectile>
+        <warmupTime>0.75</warmupTime>
+        <range>57</range>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>GGShuriken_Bullet</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>2</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+</Defs>

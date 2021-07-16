@@ -53,5 +53,4 @@
   <GhostGear.ReasonOperate>unable to operate it.</GhostGear.ReasonOperate>
   <GhostGear.CaltropsRearmed>{0}'s {1} has been rearmed by {2} unit{3} of {4}s</GhostGear.CaltropsRearmed>
   <GhostGear.FullyRearmed>{0}'s {1} has been fully rearmed with {2}s</GhostGear.FullyRearmed>
-
 </LanguageData>

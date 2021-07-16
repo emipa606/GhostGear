@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--  Attack -->
+  <JobDef>
+    <defName>HWAttackPawn</defName>
+    <driverClass>GhostGear.JobDriver_HWAttackPawn</driverClass>
+    <reportString>attacking TargetA (haywired).</reportString>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <suspendable>false</suspendable>
+    <casualInterruptible>false</casualInterruptible>
+    <collideWithPawns>true</collideWithPawns>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+    <checkOverrideOnDamage>Never</checkOverrideOnDamage>
+  </JobDef>
+  <JobDef>
+    <defName>HWAttackThing</defName>
+    <driverClass>GhostGear.JobDriver_HWAttackThing</driverClass>
+    <reportString>attacking TargetA (haywired).</reportString>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <suspendable>false</suspendable>
+    <casualInterruptible>false</casualInterruptible>
+    <collideWithPawns>true</collideWithPawns>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+    <checkOverrideOnDamage>Never</checkOverrideOnDamage>
+  </JobDef>
+  <!--  Break Down -->
+  <JobDef>
+    <defName>HWBreakDown</defName>
+    <driverClass>GhostGear.JobDriver_HWBreakDown</driverClass>
+    <reportString>breaking down (haywired).</reportString>
+    <suspendable>false</suspendable>
+    <casualInterruptible>false</casualInterruptible>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+    <checkOverrideOnDamage>Never</checkOverrideOnDamage>
+  </JobDef>
+  <!--  Explosion -->
+  <JobDef>
+    <defName>HWExplosion</defName>
+    <driverClass>GhostGear.JobDriver_HWExplosion</driverClass>
+    <reportString>exploding (haywired).</reportString>
+    <suspendable>false</suspendable>
+    <casualInterruptible>false</casualInterruptible>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+    <checkOverrideOnDamage>Never</checkOverrideOnDamage>
+  </JobDef>
+  <!--  Wandering -->
+  <JobDef>
+    <defName>HWWander</defName>
+    <driverClass>GhostGear.JobDriver_HWWander</driverClass>
+    <reportString>wandering (haywired).</reportString>
+    <suspendable>false</suspendable>
+    <casualInterruptible>false</casualInterruptible>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+    <checkOverrideOnDamage>Never</checkOverrideOnDamage>
+  </JobDef>
+</Defs>

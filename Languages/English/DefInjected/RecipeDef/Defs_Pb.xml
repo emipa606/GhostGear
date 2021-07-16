@@ -1,11 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Galena -->
-
   <MakeGGLead.label>Smelt Lead</MakeGGLead.label>
   <MakeGGLead.description>Smelt 5 lead</MakeGGLead.description>
   <MakeGGLead.jobString>Smelting lead</MakeGGLead.jobString>
-
-
 </LanguageData>
