@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Ghost Gear (Continued)</name>
   <packageId>Mlie.GhostGear</packageId>
@@ -27,11 +27,11 @@
     <li>brrainz.harmony</li>
     <li>Mlie.RimPlas</li>
   </loadAfter>
-  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
 Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2015562690
 
-[img]https://i.imgur.com/7Gzt3Rg.png[/img]
+[img]https://i.imgur.com/pufA0kM.png[/img]
 
 [table]
 	[tr]
@@ -40,11 +40,11 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2015562690
 	[/tr]
 [/table]
 	
-[img]https://i.imgur.com/NOW7jU1.png[/img]
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
 
 [h1]Overview[/h1] V1.1
 
-Ultra tech shielded armour with unique &quot;ghosting&quot; capabilities, defensive proximity burst, caltrops pods, grappling hook and high tech rail weapons using neuro-toxins and shuriken ammunition. 
+Ultra tech shielded armour with unique "ghosting" capabilities, defensive proximity burst, caltrops pods, grappling hook and high tech rail weapons using neuro-toxins and shuriken ammunition. 
 
 Haywire tech, effective against mechanoids.
 
@@ -82,7 +82,7 @@ Oskar Potocki - Power armour and weaponry artwork.
 (CC BY-NC-SA 4.0)
 
 
-[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[img]https://i.imgur.com/PwoNOj4.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
@@ -93,4 +93,3 @@ Oskar Potocki - Power armour and weaponry artwork.
 [/list]
 </description>
 </ModMetaData>
-

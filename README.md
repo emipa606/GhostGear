@@ -1,29 +1,20 @@
 # GhostGear
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2015562690
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
-
-[table]
-	[tr]
-		[td]https://invite.gg/Mlie]![Image](https://i.imgur.com/zdzzBrc.png)
-[/td]
-		[td]https://github.com/emipa606/GhostGear]![Image](https://i.imgur.com/kTkpTOE.png)
-[/td]
-	[/tr]
-[/table]
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 
 # Overview
  V1.1
 
-Ultra tech shielded armour with unique &quot;ghosting&quot; capabilities, defensive proximity burst, caltrops pods, grappling hook and high tech rail weapons using neuro-toxins and shuriken ammunition. 
+Ultra tech shielded armour with unique "ghosting" capabilities, defensive proximity burst, caltrops pods, grappling hook and high tech rail weapons using neuro-toxins and shuriken ammunition. 
 
 Haywire tech, effective against mechanoids.
 
@@ -64,7 +55,7 @@ Oskar Potocki - Power armour and weaponry artwork.
 (CC BY-NC-SA 4.0)
 
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 

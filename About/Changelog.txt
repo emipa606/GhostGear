@@ -1,5 +1,8 @@
 # Changelog for GhostGear
 
+1.0.4.0 - Fixed the required smeltable-tag on the empgrenades, thanks Scramster
+
+
 1.0.3.0 - Mod updated for 1.3 and passed autotests
 
 

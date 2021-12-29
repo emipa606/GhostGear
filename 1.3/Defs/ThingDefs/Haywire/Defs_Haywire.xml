@@ -90,6 +90,7 @@
     <smeltProducts>
       <CarboPlasteel>10</CarboPlasteel>
     </smeltProducts>
+    <smeltable>true</smeltable>
   </ThingDef>
   <ThingDef ParentName="BaseGGGrenadeProjectile">
     <defName>Proj_GGHWEMPGrenade</defName>
