@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Diseases Overhauled</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/HediffDef[defName="GGAntiNerveToxin_High"]/stages//makeImmuneTo</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>/Defs/HediffDef[defName="GGAntiNerveToxin_High"]/stages//makeImmuneTo</xpath>
+            <value>
+              <li>LymphaticMechanites</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/HediffDef[defName="GGAntiNerveToxin_High"]/stages/li</xpath>
+            <value>
+              <makeImmuneTo>
+                <li>LymphaticMechanites</li>
+              </makeImmuneTo>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

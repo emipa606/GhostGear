@@ -1,32 +1,34 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace GhostGear
+namespace GhostGear;
+
+[HarmonyPatch(typeof(Apparel), "CheckPreAbsorbDamage")]
+public class CheckPreAbsorbDamage_PostPatch
 {
-    // Token: 0x02000009 RID: 9
-    [HarmonyPatch(typeof(ShieldBelt), "CheckPreAbsorbDamage")]
-    public class CheckPreAbsorbDamage_PostPatch
+    [HarmonyPostfix]
+    public static void PostFix(ref Apparel __instance, ref bool __result, DamageInfo dinfo)
     {
-        // Token: 0x06000012 RID: 18 RVA: 0x000024A4 File Offset: 0x000006A4
-        [HarmonyPostfix]
-        public static void PostFix(ref ShieldBelt __instance, ref bool __result, ref float ___energy, DamageInfo dinfo)
+        if (!__instance.def.HasComp(typeof(CompShield)))
         {
-            if (__instance.ShieldState != ShieldState.Active)
-            {
-                __result = false;
-                return;
-            }
-
-            var haywire = DefDatabase<DamageDef>.GetNamed("GGHaywireEMP");
-            if (dinfo.Def != haywire)
-            {
-                return;
-            }
-
-            ___energy = 0f;
-            NonPublicMethods.ShieldBelt_Break(__instance);
-            __result = false;
+            return;
         }
+
+        var shieldComp = __instance.GetComp<CompShield>();
+        if (shieldComp.ShieldState != ShieldState.Active)
+        {
+            __result = false;
+            return;
+        }
+
+        var haywire = DefDatabase<DamageDef>.GetNamed("GGHaywireEMP");
+        if (dinfo.Def != haywire)
+        {
+            return;
+        }
+
+        NonPublicMethods.ShieldBelt_Break(shieldComp);
+        __result = false;
     }
 }

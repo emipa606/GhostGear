@@ -2,6 +2,7 @@
 <LanguageData>
   <!--  Mod Settings -->
   <GhostGear.Name>Ghost Gear</GhostGear.Name>
+  <GhostGear.CurrentModVersion>Installed mod-version: {0}</GhostGear.CurrentModVersion>
   <GhostGear.ACamoEff>Global active Camouflage effectiveness (%):</GhostGear.ACamoEff>
   <GhostGear.AllowRoofPunch>Allow roof punching with the use of the grapple hook:</GhostGear.AllowRoofPunch>
   <GhostGear.AllowDanger>Ignore Danger when using grapple hook:</GhostGear.AllowDanger>

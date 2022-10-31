@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>RPHexane</defName>
+    <label>Hexane</label>
+    <description>Hexane is an alkane of six carbon atoms, with the chemical formula C6H14. A colorless liquid, odorless when pure, with boiling points between 50 and 70 °C (122 and 158 °F). They are widely used as cheap, relatively safe, largely unreactive, and easily evaporated non-polar solvents.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Resource/RPHexane</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>6.9</MarketValue>
+      <Mass>0.07</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0.2</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>GGManufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeRPHexane</defName>
+    <label>Make Hexane</label>
+    <description>Make 25 Hexane</description>
+    <jobString>Making Hexane</jobString>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <workSkill>Intellectual</workSkill>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>500</workAmount>
+    <targetCountAdjustment>25</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Chemfuel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <RPHexane>25</RPHexane>
+    </products>
+    <recipeUsers Inherit="false">
+      <li>BiofuelRefinery</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>6</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>BiofuelRefining</researchPrerequisite>
+  </RecipeDef>
+</Defs>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RimPlas (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="GhostGearFab"]/comps/li[@Class='CompProperties_AffectedByFacilities']/linkableFacilities[li = 'RimPlas_DrugCabinet']</xpath>
+          <success>Invert</success>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="GhostGearFab"]/comps/li[@Class='CompProperties_AffectedByFacilities']/linkableFacilities</xpath>
+          <value>
+            <li>RimPlas_DrugCabinet</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

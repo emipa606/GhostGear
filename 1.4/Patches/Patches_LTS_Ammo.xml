@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ammunition[1.1]</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!--  Guns -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Gun_GhostGear_Pistol"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>industrial</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Gun_GhostGear_Rifle"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>industrial</ammo>
+            </li>
+          </value>
+        </li>
+        <!--  Thrown -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="GhostGearThrown_Dart"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>industrial</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="GhostGearThrown_Knife"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>industrial</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="GhostGearThrown_Shuriken"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>industrial</ammo>
+            </li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

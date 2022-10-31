@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Rimatomics</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Apparel_PowerArmorGhostGearHelmet"]/equippedStatOffsets</xpath>
+      <value>
+        <Radiation>-0.45</Radiation>
+      </value>
+    </match>
+  </Operation>
+</Patch>

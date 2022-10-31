@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--  Ghosting confusion -->
+  <JobDef>
+    <defName>GGWaitConfused</defName>
+    <driverClass>GhostGear.JobDriver_GGWaitConfused</driverClass>
+    <reportString>confused (ghosted).</reportString>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <suspendable>false</suspendable>
+    <casualInterruptible>false</casualInterruptible>
+    <collideWithPawns>true</collideWithPawns>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+    <checkOverrideOnDamage>Never</checkOverrideOnDamage>
+  </JobDef>
+  <JobDef>
+    <defName>GGFleeConfused</defName>
+    <driverClass>GhostGear.JobDriver_GGFleeConfused</driverClass>
+    <reportString>fleeing (ghosted).</reportString>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <suspendable>false</suspendable>
+    <casualInterruptible>false</casualInterruptible>
+    <collideWithPawns>true</collideWithPawns>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+    <checkOverrideOnDamage>Never</checkOverrideOnDamage>
+  </JobDef>
+</Defs>
