@@ -1,167 +1,150 @@
-﻿using System;
+using System;
 using System.Linq;
 using Verse;
 
-namespace GhostGear
+namespace GhostGear;
+
+public class HaywireData : ThingComp
 {
-    // Token: 0x02000015 RID: 21
-    public class HaywireData : ThingComp
+    private const int CheckTicks = 120;
+
+    private int HaywireTicks;
+
+    private Pawn pawn => (Pawn)parent;
+
+    public override void PostExposeData()
     {
-        // Token: 0x04000022 RID: 34
-        private const int CheckTicks = 120;
+        base.PostExposeData();
+        Scribe_Values.Look(ref HaywireTicks, "HaywireTicks");
+    }
 
-        // Token: 0x04000021 RID: 33
-        private int HaywireTicks;
-
-        // Token: 0x17000008 RID: 8
-        // (get) Token: 0x06000063 RID: 99 RVA: 0x0000464F File Offset: 0x0000284F
-        private Pawn pawn => (Pawn) parent;
-
-        // Token: 0x06000062 RID: 98 RVA: 0x00004635 File Offset: 0x00002835
-        public override void PostExposeData()
+    public override void CompTick()
+    {
+        if (!IsHaywired(pawn))
         {
-            base.PostExposeData();
-            Scribe_Values.Look(ref HaywireTicks, "HaywireTicks");
+            return;
         }
 
-        // Token: 0x06000064 RID: 100 RVA: 0x0000465C File Offset: 0x0000285C
-        public override void CompTick()
+        HaywireTicks--;
+        if ((HaywireTicks + pawn.thingIDNumber) % 120 != 0)
         {
-            if (!IsHaywired(pawn))
-            {
-                return;
-            }
-
-            HaywireTicks--;
-            if ((HaywireTicks + pawn.thingIDNumber) % 120 != 0)
-            {
-                return;
-            }
-
-            var pawn1 = pawn;
-            if (pawn1?.Map == null)
-            {
-                return;
-            }
-
-            HaywireEffect.MakeHaywireOverlay(pawn);
-            HaywireUtility.TryStartHaywireJob(pawn, 120);
+            return;
         }
 
-        // Token: 0x06000065 RID: 101 RVA: 0x000046C8 File Offset: 0x000028C8
-        public static bool IsValidForHaywire(Pawn pawn)
+        var pawn1 = pawn;
+        if (pawn1?.Map == null)
         {
-            if (pawn == null)
-            {
-                return false;
-            }
-
-            if (pawn.RaceProps.IsMechanoid)
-            {
-                return true;
-            }
-
-            var raceProps = pawn.RaceProps;
-            if (raceProps?.FleshType.defName != "Mechanoid")
-            {
-                return false;
-            }
-
-            return true;
+            return;
         }
 
-        // Token: 0x06000066 RID: 102 RVA: 0x00004700 File Offset: 0x00002900
-        public static bool IsHaywired(Pawn pawn)
+        HaywireEffect.MakeHaywireOverlay(pawn);
+        HaywireUtility.TryStartHaywireJob(pawn, 120);
+    }
+
+    public static bool IsValidForHaywire(Pawn pawn)
+    {
+        if (pawn == null)
         {
-            if (!IsValidForHaywire(pawn))
-            {
-                return false;
-            }
-
-            var hwd = pawn.TryGetComp<HaywireData>();
-            if (hwd is {HaywireTicks: > 0})
-            {
-                return true;
-            }
-
             return false;
         }
 
-        // Token: 0x06000067 RID: 103 RVA: 0x0000472C File Offset: 0x0000292C
-        public static bool TrySetHaywireTicks(Pawn pawn, float minHrs, float maxHrs)
+        if (pawn.RaceProps.IsMechanoid)
         {
-            if (!IsValidForHaywire(pawn))
-            {
-                return false;
-            }
-
-            var HWD = pawn.TryGetComp<HaywireData>();
-            if (HWD == null)
-            {
-                return false;
-            }
-
-            if (minHrs < 1f)
-            {
-                minHrs = 1f;
-            }
-
-            if (maxHrs < minHrs)
-            {
-                maxHrs = minHrs;
-            }
-
-            HWD.HaywireTicks = (int) Rand.Range(2500f * Math.Min(minHrs, 2f), 2500f * Math.Min(maxHrs, 5f));
             return true;
         }
 
-        // Token: 0x0200002D RID: 45
-        public class CompProperties_HaywireData : CompProperties
+        var raceProps = pawn.RaceProps;
+        if (raceProps?.FleshType.defName != "Mechanoid")
         {
-            // Token: 0x060000DB RID: 219 RVA: 0x00006E54 File Offset: 0x00005054
-            public CompProperties_HaywireData()
-            {
-                compClass = typeof(HaywireData);
-            }
+            return false;
         }
 
-        // Token: 0x0200002E RID: 46
-        [StaticConstructorOnStartup]
-        private static class HaywireData_Setup
+        return true;
+    }
+
+    public static bool IsHaywired(Pawn pawn)
+    {
+        if (!IsValidForHaywire(pawn))
         {
-            // Token: 0x060000DC RID: 220 RVA: 0x00006E6C File Offset: 0x0000506C
-            static HaywireData_Setup()
-            {
-                HaywireData_Setup_Pawns();
-            }
+            return false;
+        }
 
-            // Token: 0x060000DD RID: 221 RVA: 0x00006E73 File Offset: 0x00005073
-            private static void HaywireData_Setup_Pawns()
+        var hwd = pawn.TryGetComp<HaywireData>();
+        if (hwd is { HaywireTicks: > 0 })
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static bool TrySetHaywireTicks(Pawn pawn, float minHrs, float maxHrs)
+    {
+        if (!IsValidForHaywire(pawn))
+        {
+            return false;
+        }
+
+        var HWD = pawn.TryGetComp<HaywireData>();
+        if (HWD == null)
+        {
+            return false;
+        }
+
+        if (minHrs < 1f)
+        {
+            minHrs = 1f;
+        }
+
+        if (maxHrs < minHrs)
+        {
+            maxHrs = minHrs;
+        }
+
+        HWD.HaywireTicks = (int)Rand.Range(2500f * Math.Min(minHrs, 2f), 2500f * Math.Min(maxHrs, 5f));
+        return true;
+    }
+
+    public class CompProperties_HaywireData : CompProperties
+    {
+        public CompProperties_HaywireData()
+        {
+            compClass = typeof(HaywireData);
+        }
+    }
+
+    [StaticConstructorOnStartup]
+    private static class HaywireData_Setup
+    {
+        static HaywireData_Setup()
+        {
+            HaywireData_Setup_Pawns();
+        }
+
+        private static void HaywireData_Setup_Pawns()
+        {
+            HaywireDataSetup_Comp(typeof(CompProperties_HaywireData), delegate(ThingDef def)
             {
-                HaywireDataSetup_Comp(typeof(CompProperties_HaywireData), delegate(ThingDef def)
+                var race = def.race;
+                if (race is { IsMechanoid: true })
                 {
-                    var race = def.race;
-                    if (race is {IsMechanoid: true})
-                    {
-                        return true;
-                    }
+                    return true;
+                }
 
-                    var race2 = def.race;
-                    return race2?.FleshType.defName == "Mechanoid";
-                });
-            }
+                var race2 = def.race;
+                return race2?.FleshType.defName == "Mechanoid";
+            });
+        }
 
-            // Token: 0x060000DE RID: 222 RVA: 0x00006EA4 File Offset: 0x000050A4
-            private static void HaywireDataSetup_Comp(Type compType, Func<ThingDef, bool> qualifier)
+        private static void HaywireDataSetup_Comp(Type compType, Func<ThingDef, bool> qualifier)
+        {
+            var list = DefDatabase<ThingDef>.AllDefsListForReading.Where(qualifier).ToList();
+            list.RemoveDuplicates();
+            foreach (var def in list)
             {
-                var list = DefDatabase<ThingDef>.AllDefsListForReading.Where(qualifier).ToList();
-                list.RemoveDuplicates();
-                foreach (var def in list)
+                if (def.comps != null && !def.comps.Any(c => c.GetType() == compType))
                 {
-                    if (def.comps != null && !def.comps.Any(c => c.GetType() == compType))
-                    {
-                        def.comps.Add((CompProperties) Activator.CreateInstance(compType));
-                    }
+                    def.comps.Add((CompProperties)Activator.CreateInstance(compType));
                 }
             }
         }

@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Base -->
+  <ThingDef Name="ArmorGhostGearBase" ParentName="ApparelBase" Abstract="True">
+    <techLevel>Ultra</techLevel>
+    <generateCommonality>0</generateCommonality>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers Inherit="False">
+        <li>GhostGearFab</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>RimPlas_GhostGear</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <!-- Helmet -->
+  <ThingDef ParentName="ArmorGhostGearBase">
+    <defName>Apparel_PowerArmorGhostGearHelmet</defName>
+    <label>Ghost Gear Helmet</label>
+    <description>Made from advanced intelligent materials it is lighter than a regular marine helmet and with less protection, but offers good environmental protection.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/PowerArmorGGHelmet/PowerArmorGGHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>Apparel</thingClass>
+    <tickerType>Never</tickerType>
+    <comps Inherit="false">
+      <li Class="CompProperties_Forbiddable" />
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>2</Mass>
+      <Flammability>0.2</Flammability>
+      <ArmorRating_Sharp>1.15</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.9</ArmorRating_Heat>
+      <Insulation_Cold>7</Insulation_Cold>
+      <Insulation_Heat>5</Insulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <costList>
+      <ComponentSpacer>2</ComponentSpacer>
+      <RimPlasGraphene>8</RimPlasGraphene>
+      <CarboPlasteel>32</CarboPlasteel>
+    </costList>
+    <thingCategories Inherit="false">
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <apparel>
+      <tags>
+        <li>GGAdvancedArmour</li>
+        <li>SpacerMilitary</li>
+        <li>RoyalCombatGear</li>
+      </tags>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PowerArmorGGHelmet/PowerArmorGGHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+    <equippedStatOffsets>
+      <PsychicSensitivity>-0.35</PsychicSensitivity>
+      <ToxicResistance>0.35</ToxicResistance>
+    </equippedStatOffsets>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.32,0.41,0.56,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.31,0.40,0.57,1)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.31,0.40,0.55,1)</min>
+          <max>(0.32,0.42,0.57,1)</max>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.42,0.57,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+  <!-- Armour -->
+  <ThingDef ParentName="ArmorGhostGearBase">
+    <defName>Apparel_PowerArmorGhostGear</defName>
+    <label>Ghost Gear Power Armor</label>
+    <description>Made from advanced intelligent materials it is lighter and faster than regular power armour, but with less protection. But includes an integrated shield, grappling hook and EMP/Stun/Smoke burst for emergencies.</description>
+    <thingClass>GhostGear.GhostGearApparel</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>55000</WorkToMake>
+      <MaxHitPoints>325</MaxHitPoints>
+      <Mass>8</Mass>
+      <Flammability>0.2</Flammability>
+      <ArmorRating_Sharp>1.15</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.9</ArmorRating_Heat>
+      <Insulation_Cold>38</Insulation_Cold>
+      <Insulation_Heat>15</Insulation_Heat>
+      <EquipDelay>10</EquipDelay>
+      <EnergyShieldRechargeRate>0.15</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>0.75</EnergyShieldEnergyMax>
+    </statBases>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <equippedStatOffsets>
+      <MoveSpeed>+0.05</MoveSpeed>
+      <MeleeHitChance>+0.15</MeleeHitChance>
+      <MeleeDodgeChance>+0.25</MeleeDodgeChance>
+      <HuntingStealth>+0.50</HuntingStealth>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentSpacer>5</ComponentSpacer>
+      <RimPlasGraphene>20</RimPlasGraphene>
+      <CarboPlasteel>80</CarboPlasteel>
+      <Uranium>20</Uranium>
+    </costList>
+    <apparel>
+      <tags>
+        <li>GGAdvancedArmour</li>
+        <li>SpacerMilitary</li>
+        <li>RoyalCombatGear</li>
+      </tags>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.32,0.41,0.56)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.32,0.42,0.57)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.31,0.40,0.55)</min>
+          <max>(0.33,0.42,0.57)</max>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.34,0.44,0.58)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+</Defs>

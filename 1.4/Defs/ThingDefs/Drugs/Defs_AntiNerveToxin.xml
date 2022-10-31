@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="GGDrugBase" ParentName="DrugBase" Abstract="True">
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <chairSearchRadius>0</chairSearchRadius>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <preferability>NeverForNutrition</preferability>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+    </ingestible>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <thingCategories Inherit="false">
+      <li>Drugs</li>
+    </thingCategories>
+  </ThingDef>
+  <ThingDef Name="GGDrugPillBase" ParentName="GGDrugBase" Abstract="True">
+    <ingestible>
+      <foodType>Processed</foodType>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <ingestCommandString>Take {0}</ingestCommandString>
+      <ingestReportString>Taking {0}.</ingestReportString>
+    </ingestible>
+  </ThingDef>
+  <!-- =========== AntiNerveToxin ==================== -->
+  <ThingDef ParentName="GGDrugPillBase">
+    <defName>GGAntiNerveToxin</defName>
+    <label>Anti Nerve Toxin</label>
+    <description>Nerve Antitoxin pills. Provides immunity to nerve toxins and other forms of mechanite illnesses. It also improves metabollic functioning, but this increases hunger and tiredness. Taken every 5 days.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/GGAntiNerveToxin</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>200</WorkToMake>
+      <MarketValue>78</MarketValue>
+      <Mass>0.02</Mass>
+    </statBases>
+    <stackLimit>25</stackLimit>
+    <techLevel>Ultra</techLevel>
+    <ingestible>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>GGAntiNerveToxin_High</hediffDef>
+          <severity>5</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1811</listOrder>
+        <overdoseSeverityOffset>
+          <min>0.01</min>
+          <max>0.03</max>
+        </overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+  <HediffDef>
+    <defName>GGAntiNerveToxin_High</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Anti Nerve Toxin</label>
+    <description>Anti Nerve Toxin effect</description>
+    <defaultLabelColor>(0.35, 0.58, 0.93)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>5.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.95</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <ToxicResistance>0.85</ToxicResistance>
+        </statOffsets>
+        <makeImmuneTo>
+          <li>FibrousMechanites</li>
+          <li>SensoryMechanites</li>
+          <li>GGNerveToxin</li>
+        </makeImmuneTo>
+        <restFallFactor>1.35</restFallFactor>
+        <hungerRateFactorOffset>+0.35</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>+0.10</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>+0.15</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>+0.15</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>+0.05</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>+0.05</offset>
+          </li>
+          <li>
+            <capacity>Eating</capacity>
+            <postFactor>1.35</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <!-- Recipes -->
+  <RecipeDef>
+    <defName>MakeAntiNerveToxin</defName>
+    <label>Make Anti Nerve Toxin</label>
+    <description>Make 2 Anti Nerve Toxin tablets</description>
+    <jobString>Making Anti Nerve Toxin</jobString>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>400</workAmount>
+    <targetCountAdjustment>2</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Neutroamine</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RPMechanites</li>
+            <!--  @120 -->
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Neutroamine</li>
+        <li>RPMechanites</li>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <GGAntiNerveToxin>2</GGAntiNerveToxin>
+    </products>
+    <recipeUsers>
+      <li>GhostGearFab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>12</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>RimPlas_NerveToxin</researchPrerequisite>
+  </RecipeDef>
+  <!-- ===== Bulk Recipe ========= -->
+  <RecipeDef>
+    <defName>MakeBulkAntiNerveToxin</defName>
+    <label>Make Anti Nerve Toxin in bulk</label>
+    <description>Make 4 Anti Nerve Toxin tablets</description>
+    <jobString>Making Anti Nerve Toxin</jobString>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>800</workAmount>
+    <targetCountAdjustment>4</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Neutroamine</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RPMechanites</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Neutroamine</li>
+        <li>RPMechanites</li>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <GGAntiNerveToxin>4</GGAntiNerveToxin>
+    </products>
+    <recipeUsers>
+      <li>GhostGearFab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>13</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>RimPlas_NerveToxin</researchPrerequisite>
+  </RecipeDef>
+</Defs>

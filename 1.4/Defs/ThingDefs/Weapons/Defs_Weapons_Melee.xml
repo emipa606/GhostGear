@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="BaseGhostGearMeleeWeapon" ParentName="BaseWeapon" Abstract="True">
+    <techLevel>Ultra</techLevel>
+    <smeltable>true</smeltable>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <weaponTags Inherit="false">
+      <li>GGAdvancedMelee</li>
+    </weaponTags>
+    <generateCommonality>0.0</generateCommonality>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers Inherit="false">
+        <li>GhostGearFab</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <researchPrerequisite>RimPlas_NerveToxin</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef Name="BaseGhostGearMeleeWeapon_Sharp_Quality" Abstract="True" ParentName="BaseGhostGearMeleeWeapon">
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+  <!-- Katana -->
+  <ThingDef ParentName="BaseGhostGearMeleeWeapon_Sharp_Quality">
+    <defName>Melee_GhostGear_Katana</defName>
+    <label>Ghost Katana</label>
+    <description>A very sharp and effective blade that also delivers mechanite nerve toxin.</description>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Things/Item/WeaponMelee/GG_Katana</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <costList>
+      <RimPlasGraphene>20</RimPlasGraphene>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+      <RPNerveToxin_Vial>1</RPNerveToxin_Vial>
+    </costList>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.1</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2.1</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>GGMStab</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.7</cooldownTime>
+        <armorPenetration>0.85</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>GGMCut</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0.85</armorPenetration>
+      </li>
+    </tools>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <researchPrerequisites>
+      <li>LongBlades</li>
+      <li>RimPlas_NerveToxin</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!-- Kukri -->
+  <!-- ====================== Kukri ========================= -->
+  <ThingDef ParentName="BaseGhostGearMeleeWeapon_Sharp_Quality">
+    <defName>Melee_GhostGear_Kukri</defName>
+    <label>Ghost Kukri</label>
+    <techLevel>Ultra</techLevel>
+    <description>A very sharp and fast blade that delivers mechanite nerve toxin.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponMelee/GG_Kukri</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <costList>
+      <RimPlasGraphene>10</RimPlasGraphene>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+      <RPNerveToxin_Vial>1</RPNerveToxin_Vial>
+    </costList>
+    <statBases>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>0.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.1</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>GGMCut</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>1.3</cooldownTime>
+        <armorPenetration>0.85</armorPenetration>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>GGMStab</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.3</cooldownTime>
+        <armorPenetration>0.85</armorPenetration>
+      </li>
+    </tools>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <researchPrerequisites>
+      <li>RimPlas_NerveToxin</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

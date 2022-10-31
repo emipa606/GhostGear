@@ -1,5 +1,9 @@
 # Changelog for GhostGear
 
+1.4.1 - Mod updated for 1.4 and passed autotests.
+Used DeepL to update translations for ChineseSimplified, French, German, Russian
+
+
 1.0.4.0 - Fixed the required smeltable-tag on the empgrenades, thanks Scramster
 
 

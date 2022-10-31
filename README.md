@@ -5,6 +5,8 @@
 Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2015562690
 
+- For detailed description, download the https://github.com/emipa606/GhostGear/raw/main/Source/RimPlasGhostGearNotes.pdf]PDF
+
 ![Image](https://i.imgur.com/pufA0kM.png)
 
 	
@@ -65,6 +67,7 @@ Oskar Potocki - Power armour and weaponry artwork.
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+
 
 
 

@@ -1,9 +1,7 @@
-﻿using Verse.AI;
+using Verse.AI;
 
-namespace GhostGear
+namespace GhostGear;
+
+public class JobDriver_HWWander : JobDriver_Goto
 {
-    // Token: 0x0200001E RID: 30
-    public class JobDriver_HWWander : JobDriver_Goto
-    {
-    }
 }
