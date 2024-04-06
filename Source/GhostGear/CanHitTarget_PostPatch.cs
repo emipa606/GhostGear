@@ -3,7 +3,7 @@ using Verse;
 
 namespace GhostGear;
 
-[HarmonyPatch(typeof(Verb), "CanHitTarget")]
+[HarmonyPatch(typeof(Verb), nameof(Verb.CanHitTarget))]
 public class CanHitTarget_PostPatch
 {
     [HarmonyPostfix]

@@ -54,12 +54,7 @@ public class HaywireData : ThingComp
         }
 
         var raceProps = pawn.RaceProps;
-        if (raceProps?.FleshType.defName != "Mechanoid")
-        {
-            return false;
-        }
-
-        return true;
+        return raceProps?.FleshType.defName == "Mechanoid";
     }
 
     public static bool IsHaywired(Pawn pawn)
@@ -70,12 +65,7 @@ public class HaywireData : ThingComp
         }
 
         var hwd = pawn.TryGetComp<HaywireData>();
-        if (hwd is { HaywireTicks: > 0 })
-        {
-            return true;
-        }
-
-        return false;
+        return hwd is { HaywireTicks: > 0 };
     }
 
     public static bool TrySetHaywireTicks(Pawn pawn, float minHrs, float maxHrs)

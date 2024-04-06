@@ -6,6 +6,9 @@ namespace GhostGear;
 
 public class GHInjury
 {
+    private static readonly BodyPartDef insectHead = DefDatabase<BodyPartDef>.GetNamedSilentFail("InsectHead");
+    private static readonly BodyPartDef bodyDef = DefDatabase<BodyPartDef>.GetNamedSilentFail("Body");
+
     public static void DoGHRelatedInjury(Thing victim, bool headSpace)
     {
         if (victim is not Pawn pawn)
@@ -71,9 +74,9 @@ public class GHInjury
                 potentials.AddRange(Victim.RaceProps.body.GetPartsWithDef(BodyPartDefOf.Torso));
             }
 
-            if (body?.GetPartsWithDef(BodyPartDefOf.InsectHead) != null)
+            if (body?.GetPartsWithDef(insectHead) != null)
             {
-                potentials.AddRange(Victim.RaceProps.body.GetPartsWithDef(BodyPartDefOf.InsectHead));
+                potentials.AddRange(Victim.RaceProps.body.GetPartsWithDef(insectHead));
             }
         }
         else
@@ -88,9 +91,9 @@ public class GHInjury
         if (potentials.Count <= 0)
         {
             var body = Victim.RaceProps.body;
-            if (body?.GetPartsWithDef(BodyPartDefOf.Body) != null)
+            if (body?.GetPartsWithDef(bodyDef) != null)
             {
-                potentials.AddRange(Victim.RaceProps.body.GetPartsWithDef(BodyPartDefOf.Body));
+                potentials.AddRange(Victim.RaceProps.body.GetPartsWithDef(bodyDef));
             }
         }
 

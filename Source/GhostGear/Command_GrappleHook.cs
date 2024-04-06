@@ -8,7 +8,7 @@ namespace GhostGear;
 
 public class Command_GrappleHook : Command
 {
-    [NoTranslate] public static string GrappleIconPath = "Things/Special/GGGrappleHookIcon";
+    [NoTranslate] public static readonly string GrappleIconPath = "Things/Special/GGGrappleHookIcon";
 
     public Action<IntVec3> action;
 
@@ -27,7 +27,7 @@ public class Command_GrappleHook : Command
             canTargetFires = false,
             canTargetBuildings = true,
             canTargetItems = false,
-            validator = x => IsGoodGrappleSpot(user, x.Cell, x.Map, out _)
+            validator = x => IsGoodGrappleSpot(user, x.Cell, x.Map)
         };
     }
 
@@ -45,9 +45,8 @@ public class Command_GrappleHook : Command
         return false;
     }
 
-    public static bool IsGoodGrappleSpot(Pawn user, IntVec3 cell, Map map, out IntVec3 destcell)
+    public static bool IsGoodGrappleSpot(Pawn user, IntVec3 cell, Map map)
     {
-        destcell = cell;
         if (user?.Map == null || user.Map != map ||
             !AllowsRoofMove(user, user.Position, map) || !IsHookPointValid(cell, map))
         {
@@ -63,17 +62,10 @@ public class Command_GrappleHook : Command
 
         if (Controller.Settings.AllowDanger)
         {
-            destcell = chkcell;
             return true;
         }
 
-        if (chkcell.GetDangerFor(user, map) == Danger.Deadly)
-        {
-            return false;
-        }
-
-        destcell = chkcell;
-        return true;
+        return chkcell.GetDangerFor(user, map) != Danger.Deadly;
     }
 
     public static bool AllowsRoofMove(Pawn user, IntVec3 cell, Map map)

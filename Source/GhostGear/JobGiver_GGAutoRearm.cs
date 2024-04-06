@@ -72,7 +72,7 @@ public class JobGiver_GGAutoRearm : ThinkNode_JobGiver
         foreach (var targchk in listpods)
         {
             if (targchk.IsForbidden(p) ||
-                targchk?.Faction != null && !targchk.Faction.IsPlayer ||
+                targchk?.Faction is { IsPlayer: false } ||
                 !p.CanReserveAndReach(targchk, PathEndMode.ClosestTouch, Danger.None))
             {
                 continue;

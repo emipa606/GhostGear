@@ -22,15 +22,25 @@ public class GhostGearApparel : Apparel
     public static readonly Material BubbleMat =
         MaterialPool.MatFrom("Other/ShieldBubble", ShaderDatabase.Transparent, Color.green);
 
+    private static readonly SoundDef energyShield_Broken = SoundDef.Named("EnergyShield_Broken");
+
+    public readonly float ApparelScorePerEnergyMax = 0.25f;
+
     [NoTranslate] private readonly string CaltropsIconPath = "Things/Special/GGCaltropsIcon";
+
+    public readonly float EnergyLossPerDamage = 0.03f;
+
+    public readonly float EnergyOnReset = 0.2f;
 
     [NoTranslate] private readonly string GrappleHookIconPath = "Things/Special/GGGrappleHookIcon";
 
+    public readonly int KeepDisplayingTicks = 1000;
+
     [NoTranslate] private readonly string RepulseIconPath = "Things/Special/GGRepulseIcon";
 
-    public bool ActiveCamo;
+    public readonly int StartingTicksToReset = 2500;
 
-    public float ApparelScorePerEnergyMax = 0.25f;
+    public bool ActiveCamo;
 
     public int CaltropsMax = 1;
 
@@ -38,19 +48,11 @@ public class GhostGearApparel : Apparel
 
     public float energy;
 
-    public float EnergyLossPerDamage = 0.03f;
-
-    public float EnergyOnReset = 0.2f;
-
     public Vector3 impactAngleVect;
-
-    public int KeepDisplayingTicks = 1000;
 
     public int lastAbsorbDamageTick = -9999;
 
     public int lastKeepDisplayTick = -9999;
-
-    public int StartingTicksToReset = 2500;
 
     public int ticksToReset = -1;
 
@@ -199,7 +201,7 @@ public class GhostGearApparel : Apparel
         string text = "GhostGear.DoNothing".Translate();
         list.Add(new FloatMenuOption(text, delegate { GGCaltropsUse(pawn, GGArmour, false, false); },
             MenuOptionPriority.Default, null, null, 29f));
-        if (pawn?.Map != null && pawn.Spawned && !pawn.Dead &&
+        if (pawn is { Map: not null, Spawned: true, Dead: false } &&
             pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation) &&
             ((GhostGearApparel)GGArmour).CaltropsUses > 0)
         {
@@ -208,7 +210,7 @@ public class GhostGearApparel : Apparel
                 MenuOptionPriority.Default, null, null, 29f));
         }
 
-        if (pawn?.Map != null && pawn.Spawned && !pawn.Dead &&
+        if (pawn is { Map: not null, Spawned: true, Dead: false } &&
             pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation) &&
             pawn.health.capacities.CapableOf(PawnCapacityDefOf.Moving) &&
             ((GhostGearApparel)GGArmour).CaltropsUses < ((GhostGearApparel)GGArmour).CaltropsMax)
@@ -298,7 +300,7 @@ public class GhostGearApparel : Apparel
         foreach (var targchk in listpods)
         {
             if (targchk.IsForbidden(pilot) ||
-                targchk?.Faction != null && !targchk.Faction.IsPlayer ||
+                targchk?.Faction is { IsPlayer: false } ||
                 !pilot.CanReserveAndReach(targchk, PathEndMode.ClosestTouch, Danger.None))
             {
                 continue;
@@ -338,7 +340,7 @@ public class GhostGearApparel : Apparel
         string text = "GhostGear.DoNothing".Translate();
         list.Add(new FloatMenuOption(text, delegate { GGRepulse(pawn, GGArmour, 0f); }, MenuOptionPriority.Default,
             null, null, 29f));
-        if (pawn?.Map != null && pawn.Spawned && !pawn.Dead &&
+        if (pawn is { Map: not null, Spawned: true, Dead: false } &&
             pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation) &&
             ((GhostGearApparel)GGArmour).energy > 0f)
         {
@@ -535,7 +537,7 @@ public class GhostGearApparel : Apparel
     public void Break()
     {
         var wearer = Wearer;
-        SoundDefOf.EnergyShield_Broken.PlayOneShot(new TargetInfo(wearer.Position, wearer.Map));
+        energyShield_Broken.PlayOneShot(new TargetInfo(wearer.Position, wearer.Map));
         FleckMaker.Static(wearer.TrueCenter(), wearer.Map, FleckDefOf.ExplosionFlash, 12f);
         for (var i = 0; i < 6; i++)
         {

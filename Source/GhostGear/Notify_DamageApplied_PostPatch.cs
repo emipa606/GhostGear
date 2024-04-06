@@ -5,11 +5,11 @@ using Verse;
 
 namespace GhostGear;
 
-[HarmonyPatch(typeof(StunHandler), "Notify_DamageApplied", typeof(DamageInfo))]
+[HarmonyPatch(typeof(StunHandler), nameof(StunHandler.Notify_DamageApplied), typeof(DamageInfo))]
 public class Notify_DamageApplied_PostPatch
 {
     [HarmonyPostfix]
-    public static void PostFix(ref StunHandler __instance, ref int ___EMPAdaptedTicksLeft, DamageInfo dinfo)
+    public static void PostFix(ref StunHandler __instance, ref int ___stunTicksLeft, DamageInfo dinfo)
     {
         var pawn = __instance.parent as Pawn;
         if (pawn != null && (pawn.Downed || pawn.Dead))
@@ -23,12 +23,12 @@ public class Notify_DamageApplied_PostPatch
             return;
         }
 
-        if (___EMPAdaptedTicksLeft <= 0 || HaywireUtility.Rnd100() < (int)Controller.Settings.HWChance)
+        if (___stunTicksLeft <= 0 || HaywireUtility.Rnd100() < (int)Controller.Settings.HWChance)
         {
             __instance.StunFor(Mathf.RoundToInt(dinfo.Amount * 15f), dinfo.Instigator);
             if (pawn != null && pawn.RaceProps.IsMechanoid)
             {
-                ___EMPAdaptedTicksLeft = 2000;
+                ___stunTicksLeft = 2000;
             }
 
             HaywireUtility.DoHaywireEffect(pawn);

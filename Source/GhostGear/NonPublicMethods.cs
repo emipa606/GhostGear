@@ -8,7 +8,7 @@ namespace GhostGear;
 [StaticConstructorOnStartup]
 public static class NonPublicMethods
 {
-    public static Action<CompShield> ShieldBelt_Break =
+    public static readonly Action<CompShield> ShieldBelt_Break =
         (Action<CompShield>)Delegate.CreateDelegate(typeof(Action<CompShield>), null,
             AccessTools.Method(typeof(CompShield), "Break"));
 }

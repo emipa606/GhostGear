@@ -27,6 +27,7 @@ public class JobDriver_HWAttackThing : JobDriver
         var gotoCastPos = Toils_Combat.GotoCastPosition(TargetIndex.A, TargetIndex.None, false, 0.95f);
         yield return gotoCastPos;
         count += 1;
+        // ReSharper disable once ConditionIsAlwaysTrueOrFalse
         if (count > 8)
         {
             EndJobWith(JobCondition.Incompletable);

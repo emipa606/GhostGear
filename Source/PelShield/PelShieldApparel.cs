@@ -20,23 +20,23 @@ public class PelShieldApparel : Apparel
     public static readonly Material BubbleMat =
         MaterialPool.MatFrom("Other/ShieldBubble", ShaderDatabase.Transparent);
 
-    public float ApparelScorePerEnergyMax = 0.25f;
+    public readonly float ApparelScorePerEnergyMax = 0.25f;
+
+    public readonly float EnergyLossPerDamage = 0.03f;
+
+    public readonly float EnergyOnReset = 0.2f;
+
+    public readonly int KeepDisplayingTicks = 1000;
+
+    public readonly int StartingTicksToReset = 2500;
 
     public float energy;
 
-    public float EnergyLossPerDamage = 0.03f;
-
-    public float EnergyOnReset = 0.2f;
-
     public Vector3 impactAngleVect;
-
-    public int KeepDisplayingTicks = 1000;
 
     public int lastAbsorbDamageTick = -9999;
 
     public int lastKeepDisplayTick = -9999;
-
-    public int StartingTicksToReset = 2500;
 
     public int ticksToReset = -1;
 

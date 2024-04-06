@@ -4,7 +4,7 @@ using Verse;
 
 namespace GhostGear;
 
-[HarmonyPatch(typeof(Apparel), "CheckPreAbsorbDamage")]
+[HarmonyPatch(typeof(Apparel), nameof(Apparel.CheckPreAbsorbDamage))]
 public class CheckPreAbsorbDamage_PostPatch
 {
     [HarmonyPostfix]

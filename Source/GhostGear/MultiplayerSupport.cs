@@ -21,7 +21,7 @@ internal static class MultiplayerSupport
         MP.RegisterSyncMethod(typeof(GhostGearApparel), "GGRepulse");
         MP.RegisterSyncMethod(typeof(GhostGearApparel), "UseGrappleHook");
         MethodInfo[] array =
-        {
+        [
             AccessTools.Method(typeof(HaywireData), "TrySetHaywireTicks"),
             AccessTools.Method(typeof(HaywireUtility), "Rnd100"),
             AccessTools.Method(typeof(HaywireUtility), "RndTicks"),
@@ -31,7 +31,7 @@ internal static class MultiplayerSupport
             AccessTools.Method(typeof(HaywireEffect), "GetCandidate"),
             AccessTools.Method(typeof(GHInjury), "DoGHRelatedInjury"),
             AccessTools.Method(typeof(GHInjury), "SetUpInjVars")
-        };
+        ];
         foreach (var methodInfo in array)
         {
             FixRNG(methodInfo);

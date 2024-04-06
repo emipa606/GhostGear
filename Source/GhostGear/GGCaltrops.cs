@@ -77,7 +77,7 @@ public class GGCaltrops : Filth
         var preChance = 0f;
         var preNum = 0;
         var fireChance = 0f;
-        if (mode != "TM" && p is { Map: { } })
+        if (mode != "TM" && p is { Map: not null })
         {
             switch (mode)
             {

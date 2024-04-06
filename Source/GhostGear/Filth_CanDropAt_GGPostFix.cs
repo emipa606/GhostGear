@@ -4,7 +4,7 @@ using Verse;
 
 namespace GhostGear;
 
-[HarmonyPatch(typeof(Filth), "CanDropAt")]
+[HarmonyPatch(typeof(Filth), nameof(Filth.CanDropAt))]
 public class Filth_CanDropAt_GGPostFix
 {
     [HarmonyPostfix]

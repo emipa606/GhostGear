@@ -8,9 +8,9 @@ namespace GhostGear;
 
 public static class GhostGearUtility
 {
-    public static float minGGDist = Controller.Settings.MinGhostDist;
+    public static readonly float minGGDist = Controller.Settings.MinGhostDist;
 
-    public static float maxGGDist = Controller.Settings.MaxGhostDist;
+    public static readonly float maxGGDist = Controller.Settings.MaxGhostDist;
 
     public static bool IsTargetGhosted(Pawn target, Thing Caster)
     {
@@ -108,12 +108,8 @@ public static class GhostGearUtility
     internal static bool IsWearingGhostGear(Pawn pawn, out Apparel GGItem)
     {
         GGItem = null;
-        if (pawn?.apparel == null)
-        {
-            return false;
-        }
 
-        var apparel = pawn.apparel;
+        var apparel = pawn?.apparel;
         if (apparel is not { WornApparelCount: > 0 })
         {
             return false;
@@ -340,7 +336,7 @@ public static class GhostGearUtility
 
     internal static bool isValidThingForConfusion(Thing thing)
     {
-        return thing is { Map: { } } and Pawn && ((Pawn)thing).Spawned && !((Pawn)thing).RaceProps.IsMechanoid &&
+        return thing is { Map: not null } and Pawn && ((Pawn)thing).Spawned && !((Pawn)thing).RaceProps.IsMechanoid &&
                (!((Pawn)thing).RaceProps.Animal ||
                 ((Pawn)thing).RaceProps.FleshType != FleshTypeDefOf.Insectoid);
     }

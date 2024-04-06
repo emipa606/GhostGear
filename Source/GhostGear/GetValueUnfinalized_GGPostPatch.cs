@@ -4,11 +4,11 @@ using Verse;
 
 namespace GhostGear;
 
-[HarmonyPatch(typeof(StatWorker), "GetValueUnfinalized")]
+[HarmonyPatch(typeof(StatWorker), nameof(StatWorker.GetValueUnfinalized))]
 public class GetValueUnfinalized_GGPostPatch
 {
     [HarmonyPostfix]
-    public static void PostFix(ref float __result, StatWorker __instance, StatDef ___stat, StatRequest req)
+    public static void PostFix(ref float __result, StatDef ___stat, StatRequest req)
     {
         if (!req.HasThing)
         {
