@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Caltrops (Ghost Gear) -->
+  <RimPlas_GGCaltrops.label>Caltrops (Ghost Gear)</RimPlas_GGCaltrops.label>
+  <!-- EN: Grants the ability to make Ghost Gear Caltrops. -->
+  <RimPlas_GGCaltrops.description>Grants the ability to make Ghost Gear Caltrops.</RimPlas_GGCaltrops.description>
+  <!-- EN: Ghost Gear -->
+  <RimPlas_GhostGear.label>Ghost Gear</RimPlas_GhostGear.label>
+  <!-- EN: Grants the ability to make complex graphene based equipment. -->
+  <RimPlas_GhostGear.description>Grants the ability to make complex graphene based equipment.</RimPlas_GhostGear.description>
+  <!-- EN: Haywire Tech -->
+  <RimPlas_Haywire.label>Haywire Tech</RimPlas_Haywire.label>
+  <!-- EN: Grants the ability to make haywire tech. Haywire tech can be used to disable and stun mechanoids. -->
+  <RimPlas_Haywire.description>Grants the ability to make haywire tech. Haywire tech can be used to disable and stun mechanoids.</RimPlas_Haywire.description>
+  <!-- EN: Nanite nerve toxin -->
+  <RimPlas_NerveToxin.label>Nanite nerve toxin</RimPlas_NerveToxin.label>
+  <!-- EN: Grants the ability to make nanite nerve toxins. These can be used to attack neurological functioning. Can be mitigated with toxic immunity. -->
+  <RimPlas_NerveToxin.description>Grants the ability to make nanite nerve toxins. These can be used to attack neurological functioning. Can be mitigated with toxic immunity.</RimPlas_NerveToxin.description>
+</LanguageData>

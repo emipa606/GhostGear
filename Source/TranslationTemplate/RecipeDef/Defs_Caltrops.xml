@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Ghost Gear Caltrops Pods in bulk -->
+  <MakeBulkGGCaltropsPod.label>Make Ghost Gear Caltrops Pods in bulk</MakeBulkGGCaltropsPod.label>
+  <!-- EN: Make 3 Ghost Gear Caltrops Pods -->
+  <MakeBulkGGCaltropsPod.description>Make 3 Ghost Gear Caltrops Pods</MakeBulkGGCaltropsPod.description>
+  <!-- EN: Making Ghost Gear Caltrops Pods. -->
+  <MakeBulkGGCaltropsPod.jobString>Making Ghost Gear Caltrops Pods.</MakeBulkGGCaltropsPod.jobString>
+  <!-- EN: Make GG Caltrops shells in bulk -->
+  <MakeBulkGGCaltropsShell.label>Make GG Caltrops shells in bulk</MakeBulkGGCaltropsShell.label>
+  <!-- EN: Make 4 GG Caltrops shells -->
+  <MakeBulkGGCaltropsShell.description>Make 4 GG Caltrops shells</MakeBulkGGCaltropsShell.description>
+  <!-- EN: Making GG Caltrops shells. -->
+  <MakeBulkGGCaltropsShell.jobString>Making GG Caltrops shells.</MakeBulkGGCaltropsShell.jobString>
+  <!-- EN: Make Ghost Gear Caltrops Pod -->
+  <MakeGGCaltropsPod.label>Make Ghost Gear Caltrops Pod</MakeGGCaltropsPod.label>
+  <!-- EN: Make 1 Ghost Gear Caltrops Pod -->
+  <MakeGGCaltropsPod.description>Make 1 Ghost Gear Caltrops Pod</MakeGGCaltropsPod.description>
+  <!-- EN: Making Ghost Gear Caltrops Pod. -->
+  <MakeGGCaltropsPod.jobString>Making Ghost Gear Caltrops Pod.</MakeGGCaltropsPod.jobString>
+</LanguageData>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Anti Nerve Toxin -->
+  <GGAntiNerveToxin.label>Anti Nerve Toxin</GGAntiNerveToxin.label>
+  <!-- EN: Nerve Antitoxin pills. Provides immunity to nerve toxins and other forms of mechanite illnesses. It also improves metabollic functioning, but this increases hunger and tiredness. Taken every 5 days. -->
+  <GGAntiNerveToxin.description>Nerve Antitoxin pills. Provides immunity to nerve toxins and other forms of mechanite illnesses. It also improves metabollic functioning, but this increases hunger and tiredness. Taken every 5 days.</GGAntiNerveToxin.description>
+  <!-- EN: Take {0} -->
+  <GGAntiNerveToxin.ingestible.ingestCommandString>Take {0}</GGAntiNerveToxin.ingestible.ingestCommandString>
+  <!-- EN: Taking {0}. -->
+  <GGAntiNerveToxin.ingestible.ingestReportString>Taking {0}.</GGAntiNerveToxin.ingestible.ingestReportString>
+</LanguageData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Nerve toxin vial -->
+  <MakeRPNerveToxin_Vial.label>Make Nerve toxin vial</MakeRPNerveToxin_Vial.label>
+  <!-- EN: Make 1 nerve toxin vial -->
+  <MakeRPNerveToxin_Vial.description>Make 1 nerve toxin vial</MakeRPNerveToxin_Vial.description>
+  <!-- EN: Making a nerve toxin vial -->
+  <MakeRPNerveToxin_Vial.jobString>Making a nerve toxin vial</MakeRPNerveToxin_Vial.jobString>
+</LanguageData>

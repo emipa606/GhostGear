@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Haywire shell -->
+  <Bullet_Shell_GGHaywire.label>Haywire shell</Bullet_Shell_GGHaywire.label>
+  <!-- EN: Haywire EMP grenades -->
+  <GGHWEMPGrenades.label>Haywire EMP grenades</GGHWEMPGrenades.label>
+  <!-- EN: Electromagnetic pulse grenades damaging to electronic equipment that release specialised haywire mechanites. The mechanites can confuse a mechanoids behaviour. -->
+  <GGHWEMPGrenades.description>Electromagnetic pulse grenades damaging to electronic equipment that release specialised haywire mechanites. The mechanites can confuse a mechanoids behaviour.</GGHWEMPGrenades.description>
+  <!-- EN: throw HW EMP grenade -->
+  <GGHWEMPGrenades.verbs.throw_HW_EMP_grenade.label>throw HW EMP grenade</GGHWEMPGrenades.verbs.throw_HW_EMP_grenade.label>
+  <!-- EN: HW EMP grenade -->
+  <Proj_GGHWEMPGrenade.label>HW EMP grenade</Proj_GGHWEMPGrenade.label>
+  <!-- EN: Haywire shell -->
+  <Shell_GGHaywire.label>Haywire shell</Shell_GGHaywire.label>
+  <!-- EN: A pressurized shell filled with haywire nites. Can be fired from mortars or installed as a trap. Explodes when damaged. -->
+  <Shell_GGHaywire.description>A pressurized shell filled with haywire nites. Can be fired from mortars or installed as a trap. Explodes when damaged.</Shell_GGHaywire.description>
+  <!-- EN: IED Haywire trap -->
+  <TrapIED_GGHaywire.label>IED Haywire trap</TrapIED_GGHaywire.label>
+  <!-- EN: A haywire shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm. -->
+  <TrapIED_GGHaywire.description>A haywire shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</TrapIED_GGHaywire.description>
+</LanguageData>

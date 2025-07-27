@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: GG Caltrops Damage -->
+  <Damage_GGCaltrops.label>GG Caltrops Damage</Damage_GGCaltrops.label>
+  <!-- EN: {0} has been killed. -->
+  <Damage_GGCaltrops.deathMessage>{0} has been killed.</Damage_GGCaltrops.deathMessage>
+  <!-- EN: Haywire EMP -->
+  <GGHaywireEMP.label>Haywire EMP</GGHaywireEMP.label>
+  <!-- EN: {0} has been EMPed to death. -->
+  <GGHaywireEMP.deathMessage>{0} has been EMPed to death.</GGHaywireEMP.deathMessage>
+  <!-- EN: GG melee cut -->
+  <GGMCut.label>GG melee cut</GGMCut.label>
+  <!-- EN: {0} has been sliced to death. -->
+  <GGMCut.deathMessage>{0} has been sliced to death.</GGMCut.deathMessage>
+  <!-- EN: GG melee stab -->
+  <GGMStab.label>GG melee stab</GGMStab.label>
+  <!-- EN: {0} has been stabbed to death. -->
+  <GGMStab.deathMessage>{0} has been stabbed to death.</GGMStab.deathMessage>
+  <!-- EN: GG stab -->
+  <GGRangedStab.label>GG stab</GGRangedStab.label>
+  <!-- EN: {0} has been stabbed to death. -->
+  <GGRangedStab.deathMessage>{0} has been stabbed to death.</GGRangedStab.deathMessage>
+  <!-- EN: GG stab dart -->
+  <GGRangedStabDart.label>GG stab dart</GGRangedStabDart.label>
+  <!-- EN: {0} has been stabbed to death. -->
+  <GGRangedStabDart.deathMessage>{0} has been stabbed to death.</GGRangedStabDart.deathMessage>
+  <!-- EN: GG Shuriken -->
+  <GGShuriken.label>GG Shuriken</GGShuriken.label>
+  <!-- EN: {0} has been shot to death by shuriken. -->
+  <GGShuriken.deathMessage>{0} has been shot to death by shuriken.</GGShuriken.deathMessage>
+</LanguageData>

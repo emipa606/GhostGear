@@ -33,12 +33,12 @@ public class JobDriver_HWExplosion : JobDriver
         yield return wait;
     }
 
-    public virtual void DecorateWaitToil(Toil wait)
+    protected virtual void DecorateWaitToil(Toil wait)
     {
         wait.AddFailCondition(() => !HaywireData.IsHaywired(pawn));
     }
 
-    public virtual void DoHWEffect(Pawn pawn)
+    protected virtual void DoHWEffect(Pawn pawn)
     {
         if (HaywireUtility.Rnd100() < 40)
         {

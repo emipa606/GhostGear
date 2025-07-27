@@ -8,7 +8,7 @@ namespace GhostGear;
 [StaticConstructorOnStartup]
 internal static class MultiplayerSupport
 {
-    private static readonly Harmony harmony = new Harmony("rimworld.pelador.ghostgear.multiplayersupport");
+    private static readonly Harmony harmony = new("rimworld.pelador.ghostgear.multiplayersupport");
 
     static MultiplayerSupport()
     {

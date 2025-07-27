@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Nerve toxin -->
+  <GGNerveToxin.label>Nerve toxin</GGNerveToxin.label>
+  <!-- EN: Nerve toxin effect -->
+  <GGNerveToxin.description>Nerve toxin effect</GGNerveToxin.description>
+  <!-- EN: Recovering -->
+  <GGNerveToxin.stages.Recovering.label>Recovering</GGNerveToxin.stages.Recovering.label>
+  <!-- EN: Mild -->
+  <GGNerveToxin.stages.Mild.label>Mild</GGNerveToxin.stages.Mild.label>
+  <!-- EN: minor -->
+  <GGNerveToxin.stages.minor.label>minor</GGNerveToxin.stages.minor.label>
+  <!-- EN: moderate -->
+  <GGNerveToxin.stages.moderate.label>moderate</GGNerveToxin.stages.moderate.label>
+  <!-- EN: serious -->
+  <GGNerveToxin.stages.serious.label>serious</GGNerveToxin.stages.serious.label>
+</LanguageData>

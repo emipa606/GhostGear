@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Haywire mechanites -->
+  <MakeGGHWMechanites.label>Make Haywire mechanites</MakeGGHWMechanites.label>
+  <!-- EN: Make 1 Haywire mechanites -->
+  <MakeGGHWMechanites.description>Make 1 Haywire mechanites</MakeGGHWMechanites.description>
+  <!-- EN: Making Haywire mechanites -->
+  <MakeGGHWMechanites.jobString>Making Haywire mechanites</MakeGGHWMechanites.jobString>
+</LanguageData>

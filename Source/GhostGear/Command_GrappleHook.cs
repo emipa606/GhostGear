@@ -8,16 +8,16 @@ namespace GhostGear;
 
 public class Command_GrappleHook : Command
 {
-    [NoTranslate] public static readonly string GrappleIconPath = "Things/Special/GGGrappleHookIcon";
+    [NoTranslate] private static readonly string GrappleIconPath = "Things/Special/GGGrappleHookIcon";
 
     public Action<IntVec3> action;
 
     public Pawn user;
 
-    public TargetingParameters targParms => ForGrappleHookDestination(user);
+    private TargetingParameters targParms => ForGrappleHookDestination(user);
 
 
-    public static TargetingParameters ForGrappleHookDestination(Pawn user)
+    private static TargetingParameters ForGrappleHookDestination(Pawn user)
     {
         return new TargetingParameters
         {
@@ -45,16 +45,16 @@ public class Command_GrappleHook : Command
         return false;
     }
 
-    public static bool IsGoodGrappleSpot(Pawn user, IntVec3 cell, Map map)
+    private static bool IsGoodGrappleSpot(Pawn user, IntVec3 cell, Map map)
     {
         if (user?.Map == null || user.Map != map ||
-            !AllowsRoofMove(user, user.Position, map) || !IsHookPointValid(cell, map))
+            !AllowsRoofMove(user.Position, map) || !IsHookPointValid(cell, map))
         {
             return false;
         }
 
         var chkcell = GetChkCell(user, cell);
-        if (!chkcell.InBounds(map) || !AllowsRoofMove(user, chkcell, map) || chkcell.Filled(map) ||
+        if (!chkcell.InBounds(map) || !AllowsRoofMove(chkcell, map) || chkcell.Filled(map) ||
             !chkcell.Standable(map))
         {
             return false;
@@ -68,7 +68,7 @@ public class Command_GrappleHook : Command
         return chkcell.GetDangerFor(user, map) != Danger.Deadly;
     }
 
-    public static bool AllowsRoofMove(Pawn user, IntVec3 cell, Map map)
+    private static bool AllowsRoofMove(IntVec3 cell, Map map)
     {
         if (!Controller.Settings.AllowRoofPunch)
         {
@@ -93,7 +93,7 @@ public class Command_GrappleHook : Command
         return false;
     }
 
-    public static bool IsHookPointValid(IntVec3 cell, Map map)
+    private static bool IsHookPointValid(IntVec3 cell, Map map)
     {
         var thingList = cell.GetThingList(map);
         foreach (var thing in thingList)

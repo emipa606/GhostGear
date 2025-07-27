@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: shuriken -->
+  <Bullet_GGShuriken.label>shuriken</Bullet_GGShuriken.label>
+  <!-- EN: GG Dart -->
+  <GGDart_Thrown.label>GG Dart</GGDart_Thrown.label>
+  <!-- EN: Mote -->
+  <GGHaywired.label>Mote</GGHaywired.label>
+  <!-- EN: GG knife -->
+  <GGKnife_Thrown.label>GG knife</GGKnife_Thrown.label>
+  <!-- EN: GG Shuriken -->
+  <GGShuriken_Thrown.label>GG Shuriken</GGShuriken_Thrown.label>
+</LanguageData>

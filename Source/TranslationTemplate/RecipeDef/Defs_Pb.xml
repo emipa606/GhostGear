@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Smelt Lead -->
+  <MakeGGLead.label>Smelt Lead</MakeGGLead.label>
+  <!-- EN: Smelt 5 lead -->
+  <MakeGGLead.description>Smelt 5 lead</MakeGGLead.description>
+  <!-- EN: Smelting lead -->
+  <MakeGGLead.jobString>Smelting lead</MakeGGLead.jobString>
+</LanguageData>

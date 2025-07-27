@@ -2,5 +2,17 @@
   "Continued": true,
   "CanAdd": "0",
   "CanRemove": "2",
-  "PreviewVersion": "1.5"
+  "PreviewVersion": "1.6",
+  "Patches": true,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 113477,
+  "LinesOfXML": 120505,
+  "CodeBaseSize": 85,
+  "LastXmlCleaning": "2025-07-27T20:41:27.8206311+02:00",
+  "SocialImageSet": true,
+  "SearchTags": [
+    "futuristic",
+    " armor"
+  ]
 }

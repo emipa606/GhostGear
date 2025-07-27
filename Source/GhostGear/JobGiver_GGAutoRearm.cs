@@ -47,7 +47,7 @@ public class JobGiver_GGAutoRearm : ThinkNode_JobGiver
         return targ != null ? new Job(jobdef, targ) : null;
     }
 
-    internal void FindBestRearm(Pawn p, ThingDef podsItem, int podsMax, int podsFuel, out Thing targ)
+    private void FindBestRearm(Pawn p, ThingDef podsItem, int podsMax, int podsFuel, out Thing targ)
     {
         targ = null;
         if (p?.Map == null)

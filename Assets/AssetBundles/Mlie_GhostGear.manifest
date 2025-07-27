@@ -1,0 +1,97 @@
+ManifestFileVersion: 0
+CRC: 972534785
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 872495b66d2606568a3a7006fc9aaf39
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ce3b6d18a872ca8039cd5eb3c4fb7ef5
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 872495b66d2606568a3a7006fc9aaf39
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Female_east.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/WeaponRanged/Thrown/GGThrown_Knife.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Special/GGRepulseIcon.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/Lead/GGLead.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Thin_north.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Buildings/Security/IEDGGHaywire.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/GGHWMechanites/GGHWMechanites_a.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/Shell/Shell_GGCaltrops/Shell_GGCaltrops_a.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/GGCaltropsPod/GGCaltopsPod_c.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Thin_south.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/GGAntiNerveToxin/GGAntiNerveToxin_c.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/WeaponRanged/Thrown/GGThrown_Dart.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/RPHexane/RPHexane_b.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGGHelmet/PowerArmorGGHelmet_south.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGGHelmet/PowerArmorGGHelmet.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/Shell/Shell_GGHaywire/Shell_GGHaywire_c.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/WeaponRanged/Thrown/GGThrown_Shuriken.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Projectile/GGShuriken/Bullet_GGShurikenC.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Projectile/GGShuriken/Bullet_GGShurikenB.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Hulk_east.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Buildings/GhostGearFab/GhostGearFab_north.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Buildings/GhostGearFab/GhostGearFab_east.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/Shell/Shell_GGHaywire/Shell_GGHaywire_a.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Male_east.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Filth/GGCaltrops/GGCaltropsD.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Special/GGCaltropsIcon.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/WeaponMelee/GG_Katana.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Special/GGActiveCamoIcon.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Mote/ThoughtSymbol/GGConfused.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Filth/GGCaltrops/GGCaltropsB.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/GGHWMechanites/GGHWMechanites_c.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/WeaponMelee/GG_Kukri.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Special/GGGrappleHookIcon.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Hulk_north.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Projectile/ShellGGCaltrops.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/WeaponRanged/Guns/GG_Rifle.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Projectile/GGHWEMPGrenade.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGGHelmet/PowerArmorGGHelmet_east.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/GGAntiNerveToxin/GGAntiNerveToxin_b.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGGHelmet/PowerArmorGGHelmet_north.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Projectile/ShellGGHaywire.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Hulk_south.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/RPHexane/RPHexane_c.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/RPNerveToxin_Vial/RPNerveToxin_Vial_c.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/RPNerveToxin_Vial/RPNerveToxin_Vial_b.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Female_north.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/Lead/GGGalena.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/Shell/Shell_GGCaltrops/Shell_GGCaltrops_b.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/WeaponRanged/Guns/GG_Pistol.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Male_south.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Projectile/GGShuriken/Bullet_GGShurikenA.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Fat_south.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/RPNerveToxin_Vial/RPNerveToxin_Vial_a.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/GGHWMechanites/GGHWMechanites_b.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Buildings/GhostGearFab/GhostGearFab_south.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/RPHexane/RPHexane_a.png
+- Assets/Data/Mlie.GhostGear/Sounds/Weapons/GGShuriken_Bullet.ogg
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Male_north.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Projectile/GGThrown/GGDart.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Female_south.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Mote/GGHaywired.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Thin_east.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Fat_east.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Pawn/Humanlike/Apparel/PowerArmorGG/PowerArmorGG_Fat_north.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/WeaponRanged/Grenades/GGHWEMPGrenades.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/GGCaltropsPod/GGCaltopsPod_b.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/GGAntiNerveToxin/GGAntiNerveToxin_a.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/Shell/Shell_GGHaywire/Shell_GGHaywire_b.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Projectile/GGThrown/GGKnife.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Buildings/Security/IEDGGCaltrops.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/Shell/Shell_GGCaltrops/Shell_GGCaltrops_c.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Filth/GGCaltrops/GGCaltropsA.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Projectile/GGShuriken/Bullet_GGShurikenD.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Filth/GGCaltrops/GGCaltropsC.png
+- Assets/Data/Mlie.GhostGear/Textures/Things/Item/Resource/GGCaltropsPod/GGCaltopsPod_a.png
+Dependencies: []

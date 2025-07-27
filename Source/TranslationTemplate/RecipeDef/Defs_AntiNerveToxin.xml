@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Anti Nerve Toxin -->
+  <MakeAntiNerveToxin.label>Make Anti Nerve Toxin</MakeAntiNerveToxin.label>
+  <!-- EN: Make 2 Anti Nerve Toxin tablets -->
+  <MakeAntiNerveToxin.description>Make 2 Anti Nerve Toxin tablets</MakeAntiNerveToxin.description>
+  <!-- EN: Making Anti Nerve Toxin -->
+  <MakeAntiNerveToxin.jobString>Making Anti Nerve Toxin</MakeAntiNerveToxin.jobString>
+  <!-- EN: Make Anti Nerve Toxin in bulk -->
+  <MakeBulkAntiNerveToxin.label>Make Anti Nerve Toxin in bulk</MakeBulkAntiNerveToxin.label>
+  <!-- EN: Make 4 Anti Nerve Toxin tablets -->
+  <MakeBulkAntiNerveToxin.description>Make 4 Anti Nerve Toxin tablets</MakeBulkAntiNerveToxin.description>
+  <!-- EN: Making Anti Nerve Toxin -->
+  <MakeBulkAntiNerveToxin.jobString>Making Anti Nerve Toxin</MakeBulkAntiNerveToxin.jobString>
+</LanguageData>

@@ -8,21 +8,19 @@ namespace GhostGear;
 
 public class HaywireEffect
 {
-    public static Mote MakeHaywireOverlay(Thing HaywiredThing)
+    public static void MakeHaywireOverlay(Thing HaywiredThing)
     {
         if (HaywiredThing.DestroyedOrNull() || HaywiredThing is not Pawn pawn ||
             !pawn.RaceProps.IsMechanoid || pawn.Dead ||
             pawn.Map == null || !pawn.Spawned ||
             !HaywireData.IsHaywired(pawn))
         {
-            return null;
+            return;
         }
 
         var mote = (Mote)ThingMaker.MakeThing(DefDatabase<ThingDef>.GetNamed("Mote_GGHaywired"));
         mote.Attach(HaywiredThing);
         GenSpawn.Spawn(mote, pawn.Position, pawn.Map);
-
-        return mote;
     }
 
     public static void DoHWExplosion(Pawn pawn)
@@ -36,7 +34,8 @@ public class HaywireEffect
             out var postNum, out var preTD,
             out var preChance, out var preNum, out var fireChance);
         GenExplosion.DoExplosion(pawn.Position, pawn.Map, radius, dmgdef, pawn, dmg, -1f, null, null, null,
-            null, null, postChance, postNum, GasType.BlindSmoke, false, preTD, preChance, preNum, fireChance, true);
+            null, null, postChance, postNum, GasType.BlindSmoke, null, 0, false, preTD, preChance, preNum, fireChance,
+            true);
         DoHWMiniEffect(pawn);
     }
 
@@ -47,7 +46,7 @@ public class HaywireEffect
             return;
         }
 
-        SetUpBDVars(pawn, pawn, out var candidate, out var DamDef, out var dmg);
+        SetUpBDVars(pawn, out var candidate, out var DamDef, out var dmg);
         if (candidate == null)
         {
             return;
@@ -72,7 +71,7 @@ public class HaywireEffect
         }
     }
 
-    public static void SetUpExpVars(Pawn pawn, out float radius, out DamageDef dmgdef, out int dmg,
+    private static void SetUpExpVars(Pawn pawn, out float radius, out DamageDef dmgdef, out int dmg,
         out float postChance, out int postNum, out ThingDef preTD, out float preChance,
         out int preNum, out float fireChance)
     {
@@ -120,7 +119,7 @@ public class HaywireEffect
         fireChance = 0.5f;
     }
 
-    public static void SetUpBDVars(Pawn Victim, Thing instigator, out BodyPartRecord candidate,
+    private static void SetUpBDVars(Pawn Victim, out BodyPartRecord candidate,
         out DamageDef DamDef, out float dmg)
     {
         DamDef = null;
@@ -178,12 +177,12 @@ public class HaywireEffect
         }
     }
 
-    public static float RndDmg(float min, float max)
+    private static float RndDmg(float min, float max)
     {
         return Rand.Range(min, max);
     }
 
-    public static BodyPartRecord GetCandidate(List<BodyPartRecord> potentials)
+    private static BodyPartRecord GetCandidate(List<BodyPartRecord> potentials)
     {
         var candidates = new List<BodyPartRecord>();
         foreach (var BPR in potentials)

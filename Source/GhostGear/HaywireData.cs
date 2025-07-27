@@ -41,7 +41,7 @@ public class HaywireData : ThingComp
         HaywireUtility.TryStartHaywireJob(pawn, 120);
     }
 
-    public static bool IsValidForHaywire(Pawn pawn)
+    private static bool IsValidForHaywire(Pawn pawn)
     {
         if (pawn == null)
         {
@@ -95,7 +95,7 @@ public class HaywireData : ThingComp
         return true;
     }
 
-    public class CompProperties_HaywireData : CompProperties
+    private class CompProperties_HaywireData : CompProperties
     {
         public CompProperties_HaywireData()
         {

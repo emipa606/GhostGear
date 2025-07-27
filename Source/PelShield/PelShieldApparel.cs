@@ -17,36 +17,38 @@ public class PelShieldApparel : Apparel
 
     public const int JitterDurationTicks = 8;
 
-    public static readonly Material BubbleMat =
+    private static readonly Material BubbleMat =
         MaterialPool.MatFrom("Other/ShieldBubble", ShaderDatabase.Transparent);
 
-    public readonly float ApparelScorePerEnergyMax = 0.25f;
+    private static readonly SoundDef EnergyShield_Broken = DefDatabase<SoundDef>.GetNamed("EnergyShield_Broken", false);
 
-    public readonly float EnergyLossPerDamage = 0.03f;
+    private readonly float ApparelScorePerEnergyMax = 0.25f;
 
-    public readonly float EnergyOnReset = 0.2f;
+    private readonly float EnergyLossPerDamage = 0.03f;
 
-    public readonly int KeepDisplayingTicks = 1000;
+    private readonly float EnergyOnReset = 0.2f;
 
-    public readonly int StartingTicksToReset = 2500;
+    private readonly int KeepDisplayingTicks = 1000;
+
+    private readonly int StartingTicksToReset = 2500;
 
     public float energy;
 
-    public Vector3 impactAngleVect;
+    private Vector3 impactAngleVect;
 
-    public int lastAbsorbDamageTick = -9999;
+    private int lastAbsorbDamageTick = -9999;
 
-    public int lastKeepDisplayTick = -9999;
+    private int lastKeepDisplayTick = -9999;
 
-    public int ticksToReset = -1;
+    private int ticksToReset = -1;
 
-    public float EnergyMax => this.GetStatValue(StatDefOf.EnergyShieldEnergyMax);
+    private float EnergyMax => this.GetStatValue(StatDefOf.EnergyShieldEnergyMax);
 
-    public float EnergyGainPerTick => this.GetStatValue(StatDefOf.EnergyShieldRechargeRate) / 60f;
+    private float EnergyGainPerTick => this.GetStatValue(StatDefOf.EnergyShieldRechargeRate) / 60f;
 
     public float Energy => energy;
 
-    public ShieldState ShieldState => ticksToReset > 0 ? ShieldState.Resetting : ShieldState.Active;
+    private ShieldState ShieldState => ticksToReset > 0 ? ShieldState.Resetting : ShieldState.Active;
 
     private bool ShouldDisplay =>
         Wearer.Spawned && !Wearer.Dead && !Wearer.Downed && (Wearer.InAggroMentalState ||
@@ -81,7 +83,7 @@ public class PelShieldApparel : Apparel
         return EnergyMax * ApparelScorePerEnergyMax;
     }
 
-    public override void Tick()
+    protected override void Tick()
     {
         base.Tick();
         var wearer = Wearer;
@@ -127,7 +129,7 @@ public class PelShieldApparel : Apparel
         }
     }
 
-    public void DoAutoRepair(Apparel apparel, float regenEnergy)
+    private void DoAutoRepair(Apparel apparel, float regenEnergy)
     {
         if (!(((PelShieldApparel)apparel).energy > regenEnergy))
         {
@@ -156,7 +158,7 @@ public class PelShieldApparel : Apparel
         ((PelShieldApparel)apparel).energy -= regenEnergy;
     }
 
-    public bool isAutoRepair(Apparel apparel)
+    private bool isAutoRepair(Apparel apparel)
     {
         if (apparel == null || !apparel.def.useHitPoints)
         {
@@ -230,12 +232,12 @@ public class PelShieldApparel : Apparel
         return true;
     }
 
-    public void KeepDisplaying()
+    private void KeepDisplaying()
     {
         lastKeepDisplayTick = Find.TickManager.TicksGame;
     }
 
-    public void AbsorbedDamage(DamageInfo dinfo)
+    private void AbsorbedDamage(DamageInfo dinfo)
     {
         var wearer = Wearer;
         SoundDefOf.EnergyShield_AbsorbDamage.PlayOneShot(new TargetInfo(wearer.Position, wearer.Map));
@@ -253,10 +255,10 @@ public class PelShieldApparel : Apparel
         KeepDisplaying();
     }
 
-    public void Break()
+    private void Break()
     {
         var wearer = Wearer;
-        SoundDefOf.EnergyShield_Broken.PlayOneShot(new TargetInfo(wearer.Position, wearer.Map));
+        EnergyShield_Broken.PlayOneShot(new TargetInfo(wearer.Position, wearer.Map));
         FleckMaker.Static(wearer.TrueCenter(), wearer.Map, FleckDefOf.ExplosionFlash, 12f);
         for (var i = 0; i < 6; i++)
         {
@@ -269,7 +271,7 @@ public class PelShieldApparel : Apparel
         ticksToReset = StartingTicksToReset;
     }
 
-    public void Reset()
+    private void Reset()
     {
         var wearer = Wearer;
         if (wearer.Spawned)

@@ -157,7 +157,7 @@ public class JobDriver_GGGrappleHook : JobDriver_Wait
         GHInjury.DoGHRelatedInjury(localPawn, false);
     }
 
-    internal Rot4 GetRotation(Pawn user, IntVec3 destcell)
+    private Rot4 GetRotation(Pawn user, IntVec3 destcell)
     {
         var facing = Rot4.North;
         if (destcell.x > user.Position.x)
@@ -176,7 +176,7 @@ public class JobDriver_GGGrappleHook : JobDriver_Wait
         return facing;
     }
 
-    internal void GHHitRoof(IntVec3 hrpcell, Pawn user)
+    private void GHHitRoof(IntVec3 hrpcell, Pawn user)
     {
         var punchsize = new IntVec2(2, 2);
         var cr = GenAdj.OccupiedRect(hrpcell, user.Rotation, punchsize);

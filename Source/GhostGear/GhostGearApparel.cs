@@ -19,28 +19,28 @@ public class GhostGearApparel : Apparel
 
     public const int JitterDurationTicks = 8;
 
-    public static readonly Material BubbleMat =
+    private static readonly Material BubbleMat =
         MaterialPool.MatFrom("Other/ShieldBubble", ShaderDatabase.Transparent, Color.green);
 
     private static readonly SoundDef energyShield_Broken = SoundDef.Named("EnergyShield_Broken");
 
-    public readonly float ApparelScorePerEnergyMax = 0.25f;
+    private readonly float ApparelScorePerEnergyMax = 0.25f;
 
     [NoTranslate] private readonly string CaltropsIconPath = "Things/Special/GGCaltropsIcon";
 
-    public readonly float EnergyLossPerDamage = 0.03f;
+    private readonly float EnergyLossPerDamage = 0.03f;
 
-    public readonly float EnergyOnReset = 0.2f;
+    private readonly float EnergyOnReset = 0.2f;
 
     [NoTranslate] private readonly string GrappleHookIconPath = "Things/Special/GGGrappleHookIcon";
 
-    public readonly int KeepDisplayingTicks = 1000;
+    private readonly int KeepDisplayingTicks = 1000;
 
     [NoTranslate] private readonly string RepulseIconPath = "Things/Special/GGRepulseIcon";
 
-    public readonly int StartingTicksToReset = 2500;
+    private readonly int StartingTicksToReset = 2500;
 
-    public bool ActiveCamo;
+    private bool ActiveCamo;
 
     public int CaltropsMax = 1;
 
@@ -48,17 +48,17 @@ public class GhostGearApparel : Apparel
 
     public float energy;
 
-    public Vector3 impactAngleVect;
+    private Vector3 impactAngleVect;
 
-    public int lastAbsorbDamageTick = -9999;
+    private int lastAbsorbDamageTick = -9999;
 
-    public int lastKeepDisplayTick = -9999;
+    private int lastKeepDisplayTick = -9999;
 
-    public int ticksToReset = -1;
+    private int ticksToReset = -1;
 
-    public float EnergyMax => this.GetStatValue(StatDefOf.EnergyShieldEnergyMax);
+    private float EnergyMax => this.GetStatValue(StatDefOf.EnergyShieldEnergyMax);
 
-    public float EnergyGainPerTick => this.GetStatValue(StatDefOf.EnergyShieldRechargeRate) / 60f;
+    private float EnergyGainPerTick => this.GetStatValue(StatDefOf.EnergyShieldRechargeRate) / 60f;
 
     public float Energy => energy;
 
@@ -147,7 +147,7 @@ public class GhostGearApparel : Apparel
         };
     }
 
-    public override void Tick()
+    protected override void Tick()
     {
         base.Tick();
         if (Wearer == null)
@@ -195,7 +195,7 @@ public class GhostGearApparel : Apparel
         }
     }
 
-    public static void DoCaltrops(Pawn pawn, ThingWithComps GGArmour)
+    private static void DoCaltrops(Pawn pawn, ThingWithComps GGArmour)
     {
         var list = new List<FloatMenuOption>();
         string text = "GhostGear.DoNothing".Translate();
@@ -223,7 +223,7 @@ public class GhostGearApparel : Apparel
         Find.WindowStack.Add(new FloatMenu(list));
     }
 
-    public static void GGCaltropsUse(Pawn pawn, ThingWithComps GGArmour, bool usingCaltrops, bool rearming)
+    private static void GGCaltropsUse(Pawn pawn, ThingWithComps GGArmour, bool usingCaltrops, bool rearming)
     {
         if (!rearming)
         {
@@ -235,7 +235,7 @@ public class GhostGearApparel : Apparel
             var dmdef = DefDatabase<DamageDef>.GetNamed("Damage_GGCaltrops");
             var postTD = DefDatabase<ThingDef>.GetNamed("Filth_GGCaltrops");
             GenExplosion.DoExplosion(pawn.Position, pawn.Map, 4.9f, dmdef, pawn, 0, -1f, null, null, null, null,
-                postTD, 1f, 1, null, false, null, 0f, 0, 0f, true);
+                postTD, 1f, 1, null, null, 0, false, null, 0f, 0, 0f, true);
             ((GhostGearApparel)GGArmour).CaltropsUses--;
             if (((GhostGearApparel)GGArmour).CaltropsUses < 0)
             {
@@ -273,7 +273,7 @@ public class GhostGearApparel : Apparel
         }
     }
 
-    internal static void FindBestGGRearm(Pawn pilot, ThingWithComps GGArmour, out Thing targ)
+    private static void FindBestGGRearm(Pawn pilot, ThingWithComps GGArmour, out Thing targ)
     {
         targ = null;
         if (pilot?.Map == null)
@@ -334,7 +334,7 @@ public class GhostGearApparel : Apparel
         }
     }
 
-    public static void DoRepulse(Pawn pawn, ThingWithComps GGArmour)
+    private static void DoRepulse(Pawn pawn, ThingWithComps GGArmour)
     {
         var list = new List<FloatMenuOption>();
         string text = "GhostGear.DoNothing".Translate();
@@ -353,7 +353,7 @@ public class GhostGearApparel : Apparel
         Find.WindowStack.Add(new FloatMenu(list));
     }
 
-    public static void GGRepulse(Pawn p, ThingWithComps a, float e)
+    private static void GGRepulse(Pawn p, ThingWithComps a, float e)
     {
         if (!(e > 0f))
         {
@@ -387,7 +387,7 @@ public class GhostGearApparel : Apparel
             if (!repulsing)
             {
                 GenExplosion.DoExplosion(p.Position, p.Map, radius, dmdef, p, dmg, -1f, null, null, null, null,
-                    null, 1f, 1, GasType.BlindSmoke, false, null, 0f, 0, 0f, true);
+                    null, 1f, 1, GasType.BlindSmoke, null, 0, false, null, 0f, 0, 0f, true);
             }
             else
             {
@@ -398,7 +398,7 @@ public class GhostGearApparel : Apparel
         HaywireEffect.DoHWMiniEffect(p);
     }
 
-    public static void RepulseEffect(Pawn p, DamageDef def, int dmg)
+    private static void RepulseEffect(Pawn p, DamageDef def, int dmg)
     {
         if (p == null || def == null || p.Map == null)
         {
@@ -434,7 +434,7 @@ public class GhostGearApparel : Apparel
         }
     }
 
-    public static int RepulseDmg(int baseDmg, ThingWithComps a, float e)
+    private static int RepulseDmg(int baseDmg, ThingWithComps a, float e)
     {
         var dmg = 0;
         if (baseDmg <= 0)
@@ -453,7 +453,7 @@ public class GhostGearApparel : Apparel
         return dmg;
     }
 
-    public static void UseGrappleHook(Pawn Wearer, ThingWithComps thing, IntVec3 cell)
+    private static void UseGrappleHook(Pawn Wearer, ThingWithComps thing, IntVec3 cell)
     {
         var GrappleJob = new Job(DefDatabase<JobDef>.GetNamed("GGGrappleHook"), cell, thing);
 
@@ -511,12 +511,12 @@ public class GhostGearApparel : Apparel
         return true;
     }
 
-    public void KeepDisplaying()
+    private void KeepDisplaying()
     {
         lastKeepDisplayTick = Find.TickManager.TicksGame;
     }
 
-    public void AbsorbedDamage(DamageInfo dinfo)
+    private void AbsorbedDamage(DamageInfo dinfo)
     {
         var wearer = Wearer;
         SoundDefOf.EnergyShield_AbsorbDamage.PlayOneShot(new TargetInfo(wearer.Position, wearer.Map));
@@ -534,7 +534,7 @@ public class GhostGearApparel : Apparel
         KeepDisplaying();
     }
 
-    public void Break()
+    private void Break()
     {
         var wearer = Wearer;
         energyShield_Broken.PlayOneShot(new TargetInfo(wearer.Position, wearer.Map));
@@ -551,7 +551,7 @@ public class GhostGearApparel : Apparel
         ActiveCamo = false;
     }
 
-    public void Reset()
+    private void Reset()
     {
         var wearer = Wearer;
         if (wearer.Spawned)

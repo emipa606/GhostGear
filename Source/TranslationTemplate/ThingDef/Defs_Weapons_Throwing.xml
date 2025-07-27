@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Ghost Dart -->
+  <GhostGearThrown_Dart.label>Ghost Dart</GhostGearThrown_Dart.label>
+  <!-- EN: This dart is used mostly to deliver high concentrations of mechanite nerve toxin by injection. -->
+  <GhostGearThrown_Dart.description>This dart is used mostly to deliver high concentrations of mechanite nerve toxin by injection.</GhostGearThrown_Dart.description>
+  <!-- EN: point -->
+  <GhostGearThrown_Dart.tools.point.label>point</GhostGearThrown_Dart.tools.point.label>
+  <!-- EN: Ghost Dart -->
+  <GhostGearThrown_Dart.verbs.Verb_Shoot.label>Ghost Dart</GhostGearThrown_Dart.verbs.Verb_Shoot.label>
+  <!-- EN: Ghost Throwing knife -->
+  <GhostGearThrown_Knife.label>Ghost Throwing knife</GhostGearThrown_Knife.label>
+  <!-- EN: A small sharp blade mainly used as a projectile that also delivers mechanite nerve toxin. -->
+  <GhostGearThrown_Knife.description>A small sharp blade mainly used as a projectile that also delivers mechanite nerve toxin.</GhostGearThrown_Knife.description>
+  <!-- EN: point -->
+  <GhostGearThrown_Knife.tools.point.label>point</GhostGearThrown_Knife.tools.point.label>
+  <!-- EN: Ghost Throwing knife -->
+  <GhostGearThrown_Knife.verbs.Verb_Shoot.label>Ghost Throwing knife</GhostGearThrown_Knife.verbs.Verb_Shoot.label>
+  <!-- EN: Ghost Shuriken -->
+  <GhostGearThrown_Shuriken.label>Ghost Shuriken</GhostGearThrown_Shuriken.label>
+  <!-- EN: Shuriken, thrown star like projectiles that can also deliver mechanite nerve toxin. -->
+  <GhostGearThrown_Shuriken.description>Shuriken, thrown star like projectiles that can also deliver mechanite nerve toxin.</GhostGearThrown_Shuriken.description>
+  <!-- EN: point -->
+  <GhostGearThrown_Shuriken.tools.point.label>point</GhostGearThrown_Shuriken.tools.point.label>
+  <!-- EN: Ghost Shuriken -->
+  <GhostGearThrown_Shuriken.verbs.Verb_Shoot.label>Ghost Shuriken</GhostGearThrown_Shuriken.verbs.Verb_Shoot.label>
+</LanguageData>

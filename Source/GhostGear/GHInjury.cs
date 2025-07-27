@@ -27,7 +27,7 @@ public class GHInjury
         pawn.TakeDamage(dinfo);
     }
 
-    public static void SetUpInjVars(Pawn Victim, bool headspace, out BodyPartRecord candidate, out DamageDef DamDef,
+    private static void SetUpInjVars(Pawn Victim, bool headspace, out BodyPartRecord candidate, out DamageDef DamDef,
         out float dmg)
     {
         DamDef = null;
@@ -37,10 +37,10 @@ public class GHInjury
             case < 33:
                 DamDef = DamageDefOf.Cut;
                 break;
-            case >= 33 and < 60:
+            case < 60:
                 DamDef = DamageDefOf.Blunt;
                 break;
-            case >= 60 and < 80:
+            case < 80:
                 DamDef = DamageDefOf.Stab;
                 break;
             default:

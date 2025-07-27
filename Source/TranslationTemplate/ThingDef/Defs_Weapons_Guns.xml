@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Ghost Autopistol -->
+  <Gun_GhostGear_Pistol.label>Ghost Autopistol</Gun_GhostGear_Pistol.label>
+  <!-- EN: Rapid fires shuriken ammo that is laden with mechanite nerve toxin. -->
+  <Gun_GhostGear_Pistol.description>Rapid fires shuriken ammo that is laden with mechanite nerve toxin.</Gun_GhostGear_Pistol.description>
+  <!-- EN: stock -->
+  <Gun_GhostGear_Pistol.tools.stock.label>stock</Gun_GhostGear_Pistol.tools.stock.label>
+  <!-- EN: barrel -->
+  <Gun_GhostGear_Pistol.tools.barrel.label>barrel</Gun_GhostGear_Pistol.tools.barrel.label>
+  <!-- EN: Ghost Autopistol -->
+  <Gun_GhostGear_Pistol.verbs.Verb_Shoot.label>Ghost Autopistol</Gun_GhostGear_Pistol.verbs.Verb_Shoot.label>
+  <!-- EN: Ghost Rifle -->
+  <Gun_GhostGear_Rifle.label>Ghost Rifle</Gun_GhostGear_Rifle.label>
+  <!-- EN: A multi purpose weapon that rapid fires shuriken ammo that is laden with mechanite nerve toxin. -->
+  <Gun_GhostGear_Rifle.description>A multi purpose weapon that rapid fires shuriken ammo that is laden with mechanite nerve toxin.</Gun_GhostGear_Rifle.description>
+  <!-- EN: stock -->
+  <Gun_GhostGear_Rifle.tools.stock.label>stock</Gun_GhostGear_Rifle.tools.stock.label>
+  <!-- EN: barrel -->
+  <Gun_GhostGear_Rifle.tools.barrel.label>barrel</Gun_GhostGear_Rifle.tools.barrel.label>
+  <!-- EN: Ghost Rifle -->
+  <Gun_GhostGear_Rifle.verbs.Verb_Shoot.label>Ghost Rifle</Gun_GhostGear_Rifle.verbs.Verb_Shoot.label>
+</LanguageData>

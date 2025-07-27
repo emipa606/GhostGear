@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: GG melee cut -->
+  <GGMCut.label>GG melee cut</GGMCut.label>
+  <!-- EN: GG melee cut effect -->
+  <GGMCut.description>GG melee cut effect</GGMCut.description>
+  <!-- EN: cut scar -->
+  <GGMCut.comps.HediffComp_GetsPermanent.permanentLabel>cut scar</GGMCut.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Cut off -->
+  <GGMCut.injuryProps.destroyedLabel>Cut off</GGMCut.injuryProps.destroyedLabel>
+  <!-- EN: Cut out -->
+  <GGMCut.injuryProps.destroyedOutLabel>Cut out</GGMCut.injuryProps.destroyedOutLabel>
+  <!-- EN: a melee cut -->
+  <GGMCut.labelNoun>a melee cut</GGMCut.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <GGMCut.labelNounPretty>{0} in the {1}</GGMCut.labelNounPretty>
+  <!-- EN: GG melee stab -->
+  <GGMStab.label>GG melee stab</GGMStab.label>
+  <!-- EN: GG melee stab effect -->
+  <GGMStab.description>GG melee stab effect</GGMStab.description>
+  <!-- EN: stab scar -->
+  <GGMStab.comps.HediffComp_GetsPermanent.permanentLabel>stab scar</GGMStab.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Cut off -->
+  <GGMStab.injuryProps.destroyedLabel>Cut off</GGMStab.injuryProps.destroyedLabel>
+  <!-- EN: Cut out -->
+  <GGMStab.injuryProps.destroyedOutLabel>Cut out</GGMStab.injuryProps.destroyedOutLabel>
+  <!-- EN: a stab wound -->
+  <GGMStab.labelNoun>a stab wound</GGMStab.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <GGMStab.labelNounPretty>{0} in the {1}</GGMStab.labelNounPretty>
+  <!-- EN: GG shuriken cut -->
+  <GGShurikenCut.label>GG shuriken cut</GGShurikenCut.label>
+  <!-- EN: GG shuriken cut effect -->
+  <GGShurikenCut.description>GG shuriken cut effect</GGShurikenCut.description>
+  <!-- EN: cut scar -->
+  <GGShurikenCut.comps.HediffComp_GetsPermanent.permanentLabel>cut scar</GGShurikenCut.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Cut off -->
+  <GGShurikenCut.injuryProps.destroyedLabel>Cut off</GGShurikenCut.injuryProps.destroyedLabel>
+  <!-- EN: Cut out -->
+  <GGShurikenCut.injuryProps.destroyedOutLabel>Cut out</GGShurikenCut.injuryProps.destroyedOutLabel>
+  <!-- EN: a shuriken cut -->
+  <GGShurikenCut.labelNoun>a shuriken cut</GGShurikenCut.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <GGShurikenCut.labelNounPretty>{0} in the {1}</GGShurikenCut.labelNounPretty>
+  <!-- EN: GG stab -->
+  <GGStab.label>GG stab</GGStab.label>
+  <!-- EN: GG stab effect -->
+  <GGStab.description>GG stab effect</GGStab.description>
+  <!-- EN: stab scar -->
+  <GGStab.comps.HediffComp_GetsPermanent.permanentLabel>stab scar</GGStab.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Cut off -->
+  <GGStab.injuryProps.destroyedLabel>Cut off</GGStab.injuryProps.destroyedLabel>
+  <!-- EN: Cut out -->
+  <GGStab.injuryProps.destroyedOutLabel>Cut out</GGStab.injuryProps.destroyedOutLabel>
+  <!-- EN: a stab wound -->
+  <GGStab.labelNoun>a stab wound</GGStab.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <GGStab.labelNounPretty>{0} in the {1}</GGStab.labelNounPretty>
+  <!-- EN: GG dart stab -->
+  <GGStabDart.label>GG dart stab</GGStabDart.label>
+  <!-- EN: GG dart stab effect -->
+  <GGStabDart.description>GG dart stab effect</GGStabDart.description>
+  <!-- EN: stab scar -->
+  <GGStabDart.comps.HediffComp_GetsPermanent.permanentLabel>stab scar</GGStabDart.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Cut off -->
+  <GGStabDart.injuryProps.destroyedLabel>Cut off</GGStabDart.injuryProps.destroyedLabel>
+  <!-- EN: Cut out -->
+  <GGStabDart.injuryProps.destroyedOutLabel>Cut out</GGStabDart.injuryProps.destroyedOutLabel>
+  <!-- EN: a stab wound -->
+  <GGStabDart.labelNoun>a stab wound</GGStabDart.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <GGStabDart.labelNounPretty>{0} in the {1}</GGStabDart.labelNounPretty>
+</LanguageData>

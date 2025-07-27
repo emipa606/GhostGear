@@ -8,9 +8,9 @@ namespace GhostGear;
 
 public static class GhostGearUtility
 {
-    public static readonly float minGGDist = Controller.Settings.MinGhostDist;
+    private static readonly float minGGDist = Controller.Settings.MinGhostDist;
 
-    public static readonly float maxGGDist = Controller.Settings.MaxGhostDist;
+    private static readonly float maxGGDist = Controller.Settings.MaxGhostDist;
 
     public static bool IsTargetGhosted(Pawn target, Thing Caster)
     {
@@ -21,13 +21,13 @@ public static class GhostGearUtility
                GhostEffectWorked(target, Caster, GGItem);
     }
 
-    public static bool isFFGhost(Pawn target, Thing caster)
+    private static bool isFFGhost(Pawn target, Thing caster)
     {
         return target?.Faction != null && target.Faction ==
             caster?.Faction;
     }
 
-    public static bool GhostEffectWorked(Pawn target, Thing caster, Apparel GGItem)
+    private static bool GhostEffectWorked(Pawn target, Thing caster, Apparel GGItem)
     {
         var distance = target.Position.DistanceTo(caster.Position);
         if (!(distance >= minGGDist))
@@ -100,7 +100,7 @@ public static class GhostGearUtility
         return chance < 100 && (chance < 5 || HaywireUtility.Rnd100() + qualOffset > chance);
     }
 
-    internal static bool GhostGearIsActive(Apparel GGItem)
+    private static bool GhostGearIsActive(Apparel GGItem)
     {
         return GGItem is GhostGearApparel { ShieldState: ShieldState.Active };
     }
@@ -129,7 +129,7 @@ public static class GhostGearUtility
         return false;
     }
 
-    internal static List<string> GhostGearList()
+    private static List<string> GhostGearList()
     {
         var list = new List<string>();
         list.AddDistinct("Apparel_PowerArmorGhostGear");
@@ -225,12 +225,12 @@ public static class GhostGearUtility
         DoConfusionJob(thing, true, ghost);
     }
 
-    internal static bool IsConfusionJob(JobDef jobdef, JobDef flee, JobDef wait)
+    private static bool IsConfusionJob(JobDef jobdef, JobDef flee, JobDef wait)
     {
         return jobdef == flee || jobdef == wait;
     }
 
-    internal static void DoConfusionJob(Thing thing, bool isHiveMind, Thing ghost)
+    private static void DoConfusionJob(Thing thing, bool isHiveMind, Thing ghost)
     {
         if (thing is not Pawn pawn)
         {
@@ -258,7 +258,7 @@ public static class GhostGearUtility
         pawn.jobs?.jobQueue.EnqueueFirst(confusedJob);
     }
 
-    internal static Job GetConfusedJob(Thing thing, bool isHiveMind, Thing ghost, out JobDef ConfusionFleeJobDef,
+    private static Job GetConfusedJob(Thing thing, bool isHiveMind, Thing ghost, out JobDef ConfusionFleeJobDef,
         out JobDef ConfusionWaitJobDef)
     {
         var minTicks = 120;
@@ -334,7 +334,7 @@ public static class GhostGearUtility
         return confusedJob;
     }
 
-    internal static bool isValidThingForConfusion(Thing thing)
+    private static bool isValidThingForConfusion(Thing thing)
     {
         return thing is { Map: not null } and Pawn && ((Pawn)thing).Spawned && !((Pawn)thing).RaceProps.IsMechanoid &&
                (!((Pawn)thing).RaceProps.Animal ||

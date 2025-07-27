@@ -13,7 +13,7 @@ public class GGCaltrops : Filth
         Scribe_Values.Look(ref spawnTick, "spawnTick");
     }
 
-    public override void Tick()
+    protected override void Tick()
     {
         spawnTick++;
         if (spawnTick >= (2500f * Controller.Settings.CaltropDuration) + HaywireUtility.RndTicks(-25, 25))
@@ -107,7 +107,7 @@ public class GGCaltrops : Filth
         }
 
         GenExplosion.DoExplosion(pos, map, radius, dmgdef, p, dmg, -1f, null, null, null, null, null,
-            postChance, postNum, GasType.BlindSmoke, false, preTD, preChance, preNum, fireChance, true);
+            postChance, postNum, GasType.BlindSmoke, null, 0, false, preTD, preChance, preNum, fireChance, true);
         Destroy();
     }
 }

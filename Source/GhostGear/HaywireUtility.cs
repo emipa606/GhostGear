@@ -10,7 +10,7 @@ public static class HaywireUtility
 {
     public const float sensible = 50f;
 
-    public static bool IsHaywireJobDef(JobDef def)
+    private static bool IsHaywireJobDef(JobDef def)
     {
         return def == HWJobDef.HWAttackPawn || def == HWJobDef.HWAttackThing || def == HWJobDef.HWBreakDown ||
                def == HWJobDef.HWExplosion || def == HWJobDef.HWWander;
@@ -85,7 +85,7 @@ public static class HaywireUtility
         pawn?.jobs.jobQueue.EnqueueFirst(HaywireJob);
     }
 
-    public static Job TryGetHaywireJob(Pawn pawn, int HWTicks)
+    private static Job TryGetHaywireJob(Pawn pawn, int HWTicks)
     {
         Job haywireJob = null;
         if (pawn.Map == null || pawn.Downed || pawn.Dead || !pawn.Spawned)
@@ -158,7 +158,7 @@ public static class HaywireUtility
         return haywireJob;
     }
 
-    public static JobDef TryGetHWJobDef(Pawn pawn, out Thing target)
+    private static JobDef TryGetHWJobDef(Pawn pawn, out Thing target)
     {
         var rnd = Rnd100();
         target = null;
@@ -183,7 +183,7 @@ public static class HaywireUtility
         return DefDatabase<JobDef>.GetNamed(haywireJobDefName, false);
     }
 
-    public static string GetHWAttackJobDefName(Pawn pawn, out Thing target)
+    private static string GetHWAttackJobDefName(Pawn pawn, out Thing target)
     {
         var haywireJobDefName = "HWAttackPawn";
         target = null;
@@ -200,17 +200,17 @@ public static class HaywireUtility
         return haywireJobDefName;
     }
 
-    public static IntVec3 TryGetHWWanderCell(Pawn pawn)
+    private static IntVec3 TryGetHWWanderCell(Pawn pawn)
     {
         return RCellFinder.RandomWanderDestFor(pawn, pawn.Position, RndHWWanderRadius(), null, Danger.Deadly);
     }
 
-    public static float RndHWWanderRadius()
+    private static float RndHWWanderRadius()
     {
         return Rand.Range(7f, 10f);
     }
 
-    public static Thing TryGetHWTargetPawn(Pawn pawn)
+    private static Thing TryGetHWTargetPawn(Pawn pawn)
     {
         var candidates = new List<Thing>();
         Thing target = null;
@@ -251,7 +251,7 @@ public static class HaywireUtility
         return target;
     }
 
-    public static Thing TryGetHWTargetStatic(Pawn pawn)
+    private static Thing TryGetHWTargetStatic(Pawn pawn)
     {
         if (pawn?.Map == null)
         {
@@ -285,12 +285,12 @@ public static class HaywireUtility
         return target;
     }
 
-    public static Thing GetRandomThing(List<Thing> list)
+    private static Thing GetRandomThing(List<Thing> list)
     {
         return list.RandomElement();
     }
 
-    public static bool IsPathableHWThing(Pawn pawn, Thing thing, bool isPawn)
+    private static bool IsPathableHWThing(Pawn pawn, Thing thing, bool isPawn)
     {
         if (pawn == null || thing == null || pawn.Map == null)
         {
@@ -312,20 +312,20 @@ public static class HaywireUtility
         return pawn.CanReach(target, PEMode, Danger.Deadly, false, false, TraverseMode.NoPassClosedDoors);
     }
 
-    public static bool IsValidHWPawnAtk(Pawn attacker, Pawn potential)
+    private static bool IsValidHWPawnAtk(Pawn attacker, Pawn potential)
     {
         return potential is { Spawned: true, Downed: false, Dead: false } && !potential.IsBurning() &&
                attacker.CanReserve(potential);
     }
 
-    public static bool IsValidHWThingStatic(Pawn attacker, Thing thing)
+    private static bool IsValidHWThingStatic(Pawn attacker, Thing thing)
     {
         return attacker.CanReserve(thing) && !thing.DestroyedOrNull() && thing.def.useHitPoints &&
                (thing is Building && thing.def.IsBuildingArtificial || thing is Plant && thing.def.plant.IsTree);
     }
 
     [DefOf]
-    public static class HWJobDef
+    private static class HWJobDef
     {
         public static JobDef HWAttackPawn;
 
